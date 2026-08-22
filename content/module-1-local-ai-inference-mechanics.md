@@ -185,10 +185,10 @@ Inside `qwen2.5-coder:14b`, the computation flows upward through a **48-floor sk
 <!-- INTERACTIVE WIDGET 4: 48-STORY SKYSCRAPER -->
 <div class="explorable-widget">
 <div class="widget-header">
-<span class="widget-title">🏢 Interactive Explorable: 48-Story Transformer Skyscraper</span>
+<span class="widget-title">🏢 Interactive Explorable: 48-Story Transformer Skyscraper & Synaptic Volume Dials</span>
 <button onclick="runPubSkyscraperPulse()" id="pub-pulse-btn" class="action-btn">▶️ Send Signal Up 48 Floors</button>
 </div>
-<p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Click any floor to inspect its inner weight matrices and see how geometric tension holds facts:</p>
+<p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Click any floor to see what its machinery does and how <strong>numeric volume dials (weights)</strong> amplify or silence concepts:</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px;">
 <div style="display: flex; flex-direction: column; gap: 6px;">
 <div onclick="selectPubFloor(48)" id="pub-floor-48" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(236,72,153,0.4); background: rgba(236,72,153,0.1); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
@@ -220,12 +220,12 @@ Inside `qwen2.5-coder:14b`, the computation flows upward through a **48-floor sk
 <div id="pub-floor-desc" style="font-size: 0.8rem; color: #cdd6f4; line-height: 1.4;">
 <strong>Where facts live!</strong> The Feed-Forward Network (FFN) connects concepts: <code>"capital of France"</code> → <code>"Paris"</code>.
 </div>
-<div style="font-size: 0.75rem; color: #a6adc8; margin-top: 4px;">Live Weight Synapse Sample:</div>
-<div id="pub-weights-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; font-family: monospace; font-size: 0.75rem; text-align: center;">
-<div style="padding: 4px; border-radius: 4px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #34d399;">+1.294</div>
-<div style="padding: 4px; border-radius: 4px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #34d399;">+0.725</div>
-<div style="padding: 4px; border-radius: 4px; background: #1e1e2e; border: 1px solid #313244; color: #a6adc8;">-0.942</div>
-<div style="padding: 4px; border-radius: 4px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #34d399;">+0.841</div>
+<div style="font-size: 0.75rem; color: #a6adc8; margin-top: 4px; font-weight: 600;">🎛️ Sample Synaptic Volume Dials (Hover or click to inspect):</div>
+<div id="pub-weights-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; font-size: 0.75rem;">
+<!-- Populated dynamically by JavaScript -->
+</div>
+<div id="pub-dial-inspector" style="background: #181825; border: 1px solid #313244; border-radius: 6px; padding: 8px 10px; font-size: 0.75rem; color: #a6adc8;">
+💡 Hover over any volume dial above to see what it amplifies or mutes!
 </div>
 </div>
 </div>
@@ -380,14 +380,67 @@ In [[curriculum|Module 2]], we will explore:
   };
 
   var pubFloors = {
-    1: { badge: "Floor 1", col: "#6366f1", desc: "<strong>Floor 1 (Embedding Entry Gate):</strong> Converts integer token IDs into dense 5,120-dimensional semantic coordinate vectors via table lookup.", weights: ["+0.042", "-0.912", "+1.042", "+0.781"] },
-    8: { badge: "Floors 2-16", col: "#3b82f6", desc: "<strong>Floors 2–16 (Syntax & Local Grammar):</strong> Analyzes punctuation, Python indentation, bracket matching, and local relationships.", weights: ["+1.082", "-0.012", "+0.924", "+0.841"] },
-    24: { badge: "Floors 17-32", col: "#10b981", desc: "<strong>Floors 17–32 (Factual FFN Memory Banks):</strong> Where facts live! Connects concepts: <code>capital of France</code> → <code>Paris</code>.", weights: ["+1.294", "+0.725", "-0.942", "+0.841"] },
-    36: { badge: "Floors 33-47", col: "#a855f7", desc: "<strong>Floors 33–47 (Abstract Reasoning):</strong> Synthesizes multi-step plans, checks code consistency, and decides tool invocations.", weights: ["+1.420", "+0.812", "-0.780", "+1.050"] },
-    48: { badge: "Floor 48", col: "#ec4899", desc: "<strong>Floor 48 (Output LM Head):</strong> Projects final 5,120D mathematical vector back into raw logits across all 152,064 vocabulary tokens.", weights: ["+6.200", "+4.800", "+3.500", "-2.500"] }
+    1: { 
+      badge: "Floor 1", 
+      col: "#6366f1", 
+      desc: "<strong>Floor 1 (Embedding Entry Gate):</strong> Converts integer token IDs into dense 5,120-dimensional semantic coordinate vectors via table lookup.", 
+      dials: [
+        { val: "+0.042", label: "Token 2803 dim #1", type: "pos", desc: "Coordinates for technical AI concepts." },
+        { val: "-0.912", label: "Token 2803 dim #2", type: "neg", desc: "Inhibits unrelated everyday food/biology domains." },
+        { val: "+1.042", label: "Token 2803 dim #3", type: "pos", desc: "Coordinates for software engineering syntax." },
+        { val: "+0.781", label: "Token 2803 dim #4", type: "pos", desc: "Coordinates for autonomous agent orchestrators." }
+      ]
+    },
+    8: { 
+      badge: "Floors 2-16", 
+      col: "#3b82f6", 
+      desc: "<strong>Floors 2–16 (Syntax & Local Grammar):</strong> Analyzes punctuation, Python indentation, bracket matching, and local relationships.", 
+      dials: [
+        { val: "+1.082", label: "Python colon/indent rule", type: "pos", desc: "Amplifies correct code indentation after <code>def foo():</code>." },
+        { val: "-0.512", label: "Random punctuation", type: "neg", desc: "Suppresses illegal syntax characters in Python code." },
+        { val: "+0.924", label: "Function arg tracker", type: "pos", desc: "Links variable names to function argument lists." },
+        { val: "+0.841", label: "Bracket closer tracker", type: "pos", desc: "Ensures every opened <code>(</code> is matched with <code>)</code>." }
+      ]
+    },
+    24: { 
+      badge: "Floors 17-32", 
+      col: "#10b981", 
+      desc: "<strong>Floors 17–32 (Factual FFN Memory Banks):</strong> Where facts live! Connects concepts: <code>capital of France</code> → <code>Paris</code>.", 
+      dials: [
+        { val: "+1.294", label: "Capital of France → Paris", type: "pos", desc: "<strong>High volume boost!</strong> Strongly routes 'capital of France' to 'Paris'." },
+        { val: "+0.725", label: "Apple Silicon → Unified RAM", type: "pos", desc: "<strong>Hardware fact!</strong> Associates Apple chips with shared memory bus." },
+        { val: "-0.942", label: "Mute wrong city (London)", type: "neg", desc: "<strong>Mutes distraction!</strong> Silences wrong capital cities for France." },
+        { val: "+0.841", label: "Python standard library", type: "pos", desc: "Associates common functions with Python modules (e.g. os.path)." }
+      ]
+    },
+    36: { 
+      badge: "Floors 33-47", 
+      col: "#a855f7", 
+      desc: "<strong>Floors 33–47 (Abstract Reasoning):</strong> Synthesizes multi-step plans, checks code consistency, and decides tool invocations.", 
+      dials: [
+        { val: "+1.420", label: "Tool invocation router", type: "pos", desc: "Decides when the model should stop talking and call a live tool." },
+        { val: "+0.812", label: "Multi-file logic check", type: "pos", desc: "Keeps imported variables consistent across multiple modules." },
+        { val: "-0.780", label: "Hallucination filter", type: "neg", desc: "Suppresses imaginary function names not in prompt context." },
+        { val: "+1.050", label: "System prompt adherence", type: "pos", desc: "Ensures the agent maintains its identity and rules." }
+      ]
+    },
+    48: { 
+      badge: "Floor 48", 
+      col: "#ec4899", 
+      desc: "<strong>Floor 48 (Output LM Head):</strong> Projects final 5,120D mathematical vector back into raw logits across all 152,064 vocabulary tokens.", 
+      dials: [
+        { val: "+6.200", label: "Candidate ' Silicon' (92.4%)", type: "pos", desc: "<strong>Top Prediction!</strong> Massive logit score making ' Silicon' the #1 choice." },
+        { val: "+4.800", label: "Candidate ' M4' (5.2%)", type: "pos", desc: "Second highest runner-up in probability wheel." },
+        { val: "+3.500", label: "Candidate ' Hardware' (1.8%)", type: "pos", desc: "Plausible alternative token." },
+        { val: "-2.500", label: "Candidate ' Banana' (<0.01%)", type: "neg", desc: "<strong>Muted!</strong> Negative score ensures random words never win." }
+      ]
+    }
   };
 
+  var curPubFloor = 24;
+
   window.selectPubFloor = function(f) {
+    curPubFloor = f;
     var data = pubFloors[f] || pubFloors[24];
     [1, 8, 24, 36, 48].forEach(function(x) {
       var el = document.getElementById("pub-floor-" + x);
@@ -398,7 +451,27 @@ In [[curriculum|Module 2]], we will explore:
     var g = document.getElementById("pub-weights-grid");
     if (b) { b.textContent = data.badge; b.style.background = data.col; }
     if (d) d.innerHTML = data.desc;
-    if (g) g.innerHTML = data.weights.map(function(w) { return '<div style="padding: 4px; border-radius: 4px; background: rgba(255,255,255,0.05); border: 1px solid ' + data.col + '; color: #cdd6f4;">' + w + '</div>'; }).join("");
+    if (g) {
+      g.innerHTML = data.dials.map(function(dial, idx) {
+        var isPos = dial.type === "pos";
+        var bg = isPos ? "rgba(16,185,129,0.15)" : "rgba(239,68,68,0.12)";
+        var border = isPos ? "rgba(16,185,129,0.4)" : "rgba(239,68,68,0.3)";
+        var textColor = isPos ? "#34d399" : "#f87171";
+        var icon = isPos ? "🔊" : "🔇";
+        return '<div onclick="inspectPubDial(' + f + ',' + idx + ')" onmouseenter="inspectPubDial(' + f + ',' + idx + ')" style="padding: 6px 8px; border-radius: 6px; background: ' + bg + '; border: 1px solid ' + border + '; cursor: pointer; display: flex; flex-direction: column; gap: 2px;"><div style="display: flex; justify-content: space-between; font-weight: bold; font-family: monospace;"><span style="color: ' + textColor + ';">' + icon + ' ' + dial.val + '</span><span style="font-size: 0.65rem; color: #a6adc8;">Dial #' + (idx+1) + '</span></div><div style="font-size: 0.7rem; color: #cdd6f4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' + dial.label + '</div></div>';
+      }).join("");
+    }
+    window.inspectPubDial(f, 0);
+  };
+
+  window.inspectPubDial = function(floorNum, dialIdx) {
+    var data = pubFloors[floorNum] || pubFloors[24];
+    var dial = data.dials[dialIdx] || data.dials[0];
+    var inspector = document.getElementById("pub-dial-inspector");
+    if (!inspector) return;
+    var icon = dial.type === "pos" ? "🔊 <strong>Signal Boost (Amplifier)</strong>" : "🔇 <strong>Signal Mute (Inhibition)</strong>";
+    var color = dial.type === "pos" ? "#34d399" : "#f87171";
+    inspector.innerHTML = '<div style="display: flex; justify-content: space-between; margin-bottom: 2px;"><span style="color: ' + color + ';">' + icon + ' [Weight: ' + dial.val + ']</span><span style="color: #818cf8; font-weight: bold;">' + dial.label + '</span></div><div style="color: #e2e8f0;">' + dial.desc + '</div>';
   };
 
   window.runPubSkyscraperPulse = function() {
