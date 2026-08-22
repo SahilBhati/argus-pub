@@ -1,91 +1,62 @@
-@use "./variables.scss" as *;
+/* ========================================================================= */
+/* Argus Digital Garden — Custom SCSS & Keyframe Animations                  */
+/* ========================================================================= */
 
-/* ==========================================================================
-   Argus Digital Garden - Advanced Animation & Visual Components System
-   ========================================================================== */
-
-/* 1. Global Animations & Keyframes */
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(99, 102, 241, 0.2), inset 0 0 15px rgba(99, 102, 241, 0.1);
-  }
-  50% {
-    box-shadow: 0 0 25px rgba(99, 102, 241, 0.45), inset 0 0 20px rgba(99, 102, 241, 0.2);
-  }
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes floatSlow {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
-}
-
-@keyframes blinkCursor {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 2. Gradient Headers & Badges */
+/* 1. Dynamic Gradient Text & Glow Effects */
 .gradient-text {
   background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientShift 6s ease infinite;
   display: inline-block;
   font-weight: 800;
 }
 
+/* 2. Interactive Status Badges */
 .status-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   padding: 4px 12px;
   border-radius: 9999px;
-  font-size: 0.825rem;
+  font-size: 0.8rem;
   font-weight: 600;
   background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.3);
-  color: var(--secondary);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #6366f1;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  margin-right: 6px;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+  }
 
   &.live {
-    background: rgba(16, 185, 129, 0.12);
-    border-color: rgba(16, 185, 129, 0.4);
+    background: rgba(16, 185, 129, 0.1);
     color: #10b981;
+    border-color: rgba(16, 185, 129, 0.3);
   }
 
   .dot {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background-color: currentColor;
     display: inline-block;
-    box-shadow: 0 0 8px currentColor;
-    animation: pulseGlow 2s infinite;
+    animation: pulseDot 2s infinite ease-in-out;
   }
 }
 
-/* 3. Interactive Glassmorphic Feature Cards */
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* 3. Glassmorphic Feature Grid Cards */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.25rem;
   margin: 1.5rem 0;
 }
@@ -95,27 +66,26 @@
   border: 1px solid var(--lightgray);
   border-radius: 12px;
   padding: 1.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   position: relative;
   overflow: hidden;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100%;
     height: 3px;
     background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.25s ease;
   }
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
     border-color: rgba(99, 102, 241, 0.4);
-    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.12);
 
     &::before {
       opacity: 1;
@@ -129,35 +99,35 @@
   }
 
   h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.5rem 0;
     font-size: 1.15rem;
   }
 
   p {
     margin: 0;
-    font-size: 0.925rem;
+    font-size: 0.9rem;
     color: var(--darkgray);
     line-height: 1.5;
   }
 }
 
-/* 4. Terminal & Animated Console Mockup */
+/* 4. Animated macOS Terminal Mockup */
 .mac-terminal {
-  background: #111827;
-  border: 1px solid #1f2937;
+  background: #1e1e2e;
   border-radius: 10px;
-  margin: 1.5rem 0;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  font-family: var(--codeFont, monospace);
+  margin: 1.5rem 0;
+  border: 1px solid #313244;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   .terminal-header {
-    background: #1f2937;
+    background: #181825;
     padding: 10px 14px;
     display: flex;
     align-items: center;
     gap: 8px;
+    border-bottom: 1px solid #313244;
 
     .button {
       width: 11px;
@@ -165,22 +135,21 @@
       border-radius: 50%;
       display: inline-block;
 
-      &.close { background: #ef4444; }
-      &.minimize { background: #f59e0b; }
-      &.maximize { background: #10b981; }
+      &.close { background: #f87171; }
+      &.minimize { background: #fbbf24; }
+      &.maximize { background: #34d399; }
     }
 
     .terminal-title {
-      font-size: 0.8rem;
-      color: #9ca3af;
-      margin-left: auto;
-      margin-right: auto;
-      font-weight: 500;
+      color: #a6adc8;
+      font-size: 0.75rem;
+      margin: 0 auto;
+      transform: translateX(-15px);
     }
   }
 
   .terminal-body {
-    padding: 1rem 1.25rem;
+    padding: 1.25rem;
     color: #f3f4f6;
     font-size: 0.9rem;
     line-height: 1.6;
@@ -201,12 +170,8 @@
       margin-top: 0.25rem;
       margin-bottom: 0.75rem;
 
-      &.success {
-        color: #34d399;
-      }
-      &.highlight {
-        color: #fbbf24;
-      }
+      &.success { color: #34d399; }
+      &.highlight { color: #fbbf24; }
     }
 
     .cursor {
@@ -218,6 +183,11 @@
       animation: blinkCursor 1s infinite;
     }
   }
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 /* 5. Memory Allocation & Resource Progress Bars */
@@ -251,18 +221,10 @@
     transition: width 1s ease-in-out;
     position: relative;
 
-    &.model {
-      background: linear-gradient(90deg, #6366f1, #818cf8);
-    }
-    &.kv-cache {
-      background: linear-gradient(90deg, #ec4899, #f472b6);
-    }
-    &.system {
-      background: linear-gradient(90deg, #10b981, #34d399);
-    }
-    &.free {
-      background: #cbd5e1;
-    }
+    &.model { background: linear-gradient(90deg, #6366f1, #818cf8); }
+    &.kv-cache { background: linear-gradient(90deg, #ec4899, #f472b6); }
+    &.system { background: linear-gradient(90deg, #10b981, #34d399); }
+    &.free { background: #cbd5e1; }
   }
 
   .gauge-legend {
@@ -368,5 +330,102 @@ details.deep-dive {
     padding-top: 0.75rem;
     border-top: 1px dashed var(--lightgray);
     font-size: 0.925rem;
+  }
+}
+
+/* 8. Learning Curriculum & Roadmap Cards */
+.curriculum-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.curriculum-module {
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  transition: all 0.25s ease;
+  overflow: hidden;
+
+  &:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.08);
+    transform: translateY(-2px);
+  }
+
+  &.active {
+    border-left: 4px solid #6366f1;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.04), transparent);
+  }
+
+  .module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .module-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    background: rgba(99, 102, 241, 0.12);
+    color: #6366f1;
+  }
+
+  .status-pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+
+    &.completed {
+      background: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+    }
+    &.in-progress {
+      background: rgba(245, 158, 11, 0.15);
+      color: #f59e0b;
+    }
+    &.upcoming {
+      background: rgba(156, 163, 175, 0.15);
+      color: #9ca3af;
+    }
+  }
+
+  h3 {
+    margin: 0.25rem 0 0.5rem 0;
+    font-size: 1.2rem;
+  }
+
+  p {
+    margin: 0 0 1rem 0;
+    color: var(--darkgray);
+    font-size: 0.925rem;
+    line-height: 1.5;
+  }
+
+  .topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    .topic-tag {
+      font-size: 0.775rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: var(--lightgray);
+      color: var(--dark);
+      font-family: var(--codeFont);
+    }
   }
 }
