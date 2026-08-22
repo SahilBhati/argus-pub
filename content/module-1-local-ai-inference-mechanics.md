@@ -99,36 +99,26 @@ $$\text{Vector}(\text{"King"}) - \text{Vector}(\text{"Man"}) + \text{Vector}(\te
 
 <!-- INTERACTIVE WIDGET 1: VECTOR ARITHMETIC -->
 <div class="explorable-widget">
-  <div class="widget-header">
-    <span class="widget-title">🎮 Interactive Explorable: Conceptual Vector Math</span>
-    <button onclick="runPubVectorMath()" class="action-btn">▶️ Run Vector Math: King - Man + Woman = Queen</button>
-  </div>
-  
-  <p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Click the button to see the laser vector lines calculate conceptual arithmetic live in 2D space:</p>
-  
-  <div style="background: #11111b; border: 1px solid #313244; border-radius: 10px; height: 260px; position: relative; overflow: hidden;">
-    <svg id="pub-vector-svg" style="width: 100%; height: 100%;" viewBox="0 0 650 240">
-      <line x1="30" y1="120" x2="620" y2="120" stroke="#313244" stroke-dasharray="4" />
-      <line x1="325" y1="20" x2="325" y2="220" stroke="#313244" stroke-dasharray="4" />
-      
-      <!-- Royalty Cluster -->
-      <g transform="translate(140, 50)"><circle r="14" fill="#6366f1" fill-opacity="0.3" stroke="#6366f1" stroke-width="2" /><text y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">👑 King</text></g>
-      <g transform="translate(280, 50)"><circle r="14" fill="#ec4899" fill-opacity="0.3" stroke="#ec4899" stroke-width="2" /><text y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">👸 Queen</text></g>
-      <g transform="translate(140, 190)"><circle r="14" fill="#3b82f6" fill-opacity="0.3" stroke="#3b82f6" stroke-width="2" /><text y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">👨 Man</text></g>
-      <g transform="translate(280, 190)"><circle r="14" fill="#f43f5e" fill-opacity="0.3" stroke="#f43f5e" stroke-width="2" /><text y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">👩 Woman</text></g>
-      
-      <!-- Code Cluster -->
-      <g transform="translate(500, 50)"><circle r="12" fill="#10b981" fill-opacity="0.3" stroke="#10b981" stroke-width="2" /><text y="4" text-anchor="middle" fill="#a7f3d0" font-size="9" font-family="monospace">def</text></g>
-      <g transform="translate(560, 80)"><circle r="12" fill="#10b981" fill-opacity="0.3" stroke="#10b981" stroke-width="2" /><text y="4" text-anchor="middle" fill="#a7f3d0" font-size="9" font-family="monospace">return</text></g>
-
-      <!-- Animated Vector Paths -->
-      <path id="pub-vec-arrow1" d="" stroke="#a855f7" stroke-width="3" fill="none" style="display: none;" />
-      <path id="pub-vec-arrow2" d="" stroke="#ec4899" stroke-width="3" fill="none" style="display: none;" />
-    </svg>
-    <div id="pub-vec-status" style="position: absolute; bottom: 8px; left: 12px; right: 12px; background: rgba(24, 24, 37, 0.9); border: 1px solid #313244; padding: 6px 12px; border-radius: 6px; font-size: 0.75rem; color: #a6adc8;">
-      Click "Run Vector Math" to watch concept vectors calculate live.
-    </div>
-  </div>
+<div class="widget-header">
+<span class="widget-title">🎮 Interactive Explorable: Conceptual Vector Math</span>
+<button onclick="runPubVectorMath()" class="action-btn">▶️ Run Vector Math: King - Man + Woman = Queen</button>
+</div>
+<p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Click the button to see the laser vector lines calculate conceptual arithmetic live in 2D space:</p>
+<div style="background: #11111b; border: 1px solid #313244; border-radius: 10px; height: 260px; position: relative; overflow: hidden;">
+<svg id="pub-vector-svg" style="width: 100%; height: 100%;" viewBox="0 0 650 240">
+<line x1="30" y1="120" x2="620" y2="120" stroke="#313244" stroke-dasharray="4" />
+<line x1="325" y1="20" x2="325" y2="220" stroke="#313244" stroke-dasharray="4" />
+<g transform="translate(140, 50)"><circle r="14" fill="#6366f1" fill-opacity="0.3" stroke="#6366f1" stroke-width="2" /><text y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">👑 King</text></g>
+<g transform="translate(280, 50)"><circle r="14" fill="#ec4899" fill-opacity="0.3" stroke="#ec4899" stroke-width="2" /><text y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">👸 Queen</text></g>
+<g transform="translate(140, 190)"><circle r="14" fill="#3b82f6" fill-opacity="0.3" stroke="#3b82f6" stroke-width="2" /><text y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">👨 Man</text></g>
+<g transform="translate(280, 190)"><circle r="14" fill="#f43f5e" fill-opacity="0.3" stroke="#f43f5e" stroke-width="2" /><text y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">👩 Woman</text></g>
+<g transform="translate(500, 50)"><circle r="12" fill="#10b981" fill-opacity="0.3" stroke="#10b981" stroke-width="2" /><text y="4" text-anchor="middle" fill="#a7f3d0" font-size="9" font-family="monospace">def</text></g>
+<g transform="translate(560, 80)"><circle r="12" fill="#10b981" fill-opacity="0.3" stroke="#10b981" stroke-width="2" /><text y="4" text-anchor="middle" fill="#a7f3d0" font-size="9" font-family="monospace">return</text></g>
+<path id="pub-vec-arrow1" d="" stroke="#a855f7" stroke-width="3" fill="none" style="display: none;" />
+<path id="pub-vec-arrow2" d="" stroke="#ec4899" stroke-width="3" fill="none" style="display: none;" />
+</svg>
+<div id="pub-vec-status" style="position: absolute; bottom: 8px; left: 12px; right: 12px; background: rgba(24, 24, 37, 0.9); border: 1px solid #313244; padding: 6px 12px; border-radius: 6px; font-size: 0.75rem; color: #a6adc8;">Click "Run Vector Math" to watch concept vectors calculate live.</div>
+</div>
 </div>
 
 ---
@@ -143,25 +133,21 @@ Consider these two sentences:
 
 <!-- INTERACTIVE WIDGET 2: SELF-ATTENTION SPOTLIGHT -->
 <div class="explorable-widget">
-  <div class="widget-header">
-    <span class="widget-title">🔦 Interactive Explorable: Self-Attention Spotlight</span>
-    <div style="display: flex; gap: 6px;">
-      <button onclick="setPubAttentionSentence(1)" id="pub-attn-btn-1" class="toggle-btn active">Sentence A (Tired)</button>
-      <button onclick="setPubAttentionSentence(2)" id="pub-attn-btn-2" class="toggle-btn">Sentence B (Wide)</button>
-    </div>
-  </div>
-
-  <p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Hover or tap on any word below to see the mathematical spotlight of attention calculate connection scores:</p>
-
-  <div style="background: #11111b; border: 1px solid #313244; border-radius: 10px; padding: 1.25rem;">
-    <div id="pub-attn-words-row" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 1rem 0;">
-      <!-- Populated by JavaScript below -->
-    </div>
-    <div id="pub-attn-desc-box" style="background: #181825; border: 1px solid #313244; border-radius: 8px; padding: 8px 12px; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
-      <span id="pub-attn-desc-text">Hover over <strong>"it"</strong> to inspect attention connection weights.</span>
-      <span id="pub-attn-score-text" style="font-family: ui-monospace, monospace; color: #34d399; font-weight: bold;">89.4% Connection</span>
-    </div>
-  </div>
+<div class="widget-header">
+<span class="widget-title">🔦 Interactive Explorable: Self-Attention Spotlight</span>
+<div style="display: flex; gap: 6px;">
+<button onclick="setPubAttentionSentence(1)" id="pub-attn-btn-1" class="toggle-btn active">Sentence A (Tired)</button>
+<button onclick="setPubAttentionSentence(2)" id="pub-attn-btn-2" class="toggle-btn">Sentence B (Wide)</button>
+</div>
+</div>
+<p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Hover or tap on any word below to see the mathematical spotlight of attention calculate connection scores:</p>
+<div style="background: #11111b; border: 1px solid #313244; border-radius: 10px; padding: 1.25rem;">
+<div id="pub-attn-words-row" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 1rem 0;"></div>
+<div id="pub-attn-desc-box" style="background: #181825; border: 1px solid #313244; border-radius: 8px; padding: 8px 12px; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
+<span id="pub-attn-desc-text">Hover over <strong>"it"</strong> to inspect attention connection weights.</span>
+<span id="pub-attn-score-text" style="font-family: ui-monospace, monospace; color: #34d399; font-weight: bold;">89.4% Connection</span>
+</div>
+</div>
 </div>
 
 ---
@@ -172,28 +158,22 @@ Before picking the next word, the model calculates probability slices across all
 
 <!-- INTERACTIVE WIDGET 3: TEMPERATURE SIMULATOR -->
 <div class="explorable-widget">
-  <div class="widget-header">
-    <span class="widget-title">🎲 Interactive Explorable: Temperature Probability Wheel</span>
-    <span id="pub-temp-badge" class="widget-badge">Temperature: 0.20 (Precise / Code)</span>
-  </div>
-
-  <p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Drag the slider below to see how temperature flattens or freezes next-token candidate probabilities:</p>
-
-  <div style="background: #11111b; border: 1px solid #313244; border-radius: 10px; padding: 1.25rem; margin-bottom: 0.75rem;">
-    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
-      <span style="font-size: 0.75rem; color: #a6adc8;">0.0 (Cold)</span>
-      <input type="range" id="pub-temp-slider" min="1" max="150" value="20" oninput="updatePubTemperature(this.value)" style="flex: 1; accent-color: #ec4899; cursor: pointer;">
-      <span style="font-size: 0.75rem; color: #a6adc8;">1.5 (Hot)</span>
-    </div>
-    
-    <div style="font-size: 0.8rem; color: #cdd6f4; margin-bottom: 0.5rem;">
-      Prompt: <code style="color: #818cf8;">"Argus runs locally on Apple"</code> → Next Candidate Tokens:
-    </div>
-    
-    <div id="pub-temp-bars-container" style="display: flex; flex-direction: column; gap: 8px;">
-      <!-- Populated by JavaScript below -->
-    </div>
-  </div>
+<div class="widget-header">
+<span class="widget-title">🎲 Interactive Explorable: Temperature Probability Wheel</span>
+<span id="pub-temp-badge" class="widget-badge">Temperature: 0.20 (Precise / Code)</span>
+</div>
+<p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Drag the slider below to see how temperature flattens or freezes next-token candidate probabilities:</p>
+<div style="background: #11111b; border: 1px solid #313244; border-radius: 10px; padding: 1.25rem; margin-bottom: 0.75rem;">
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
+<span style="font-size: 0.75rem; color: #a6adc8;">0.0 (Cold)</span>
+<input type="range" id="pub-temp-slider" min="1" max="150" value="20" oninput="updatePubTemperature(this.value)" style="flex: 1; accent-color: #ec4899; cursor: pointer;">
+<span style="font-size: 0.75rem; color: #a6adc8;">1.5 (Hot)</span>
+</div>
+<div style="font-size: 0.8rem; color: #cdd6f4; margin-bottom: 0.5rem;">
+Prompt: <code style="color: #818cf8;">"Argus runs locally on Apple"</code> → Next Candidate Tokens:
+</div>
+<div id="pub-temp-bars-container" style="display: flex; flex-direction: column; gap: 8px;"></div>
+</div>
 </div>
 
 ---
@@ -204,56 +184,51 @@ Inside `qwen2.5-coder:14b`, the computation flows upward through a **48-floor sk
 
 <!-- INTERACTIVE WIDGET 4: 48-STORY SKYSCRAPER -->
 <div class="explorable-widget">
-  <div class="widget-header">
-    <span class="widget-title">🏢 Interactive Explorable: 48-Story Transformer Skyscraper</span>
-    <button onclick="runPubSkyscraperPulse()" id="pub-pulse-btn" class="action-btn">▶️ Send Signal Up 48 Floors</button>
-  </div>
-
-  <p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Click any floor to inspect its inner weight matrices and see how geometric tension holds facts:</p>
-
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px;">
-    <!-- Floors Column -->
-    <div style="display: flex; flex-direction: column; gap: 6px;">
-      <div onclick="selectPubFloor(48)" id="pub-floor-48" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(236,72,153,0.4); background: rgba(236,72,153,0.1); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.8rem; font-weight: bold; color: #f472b6;">Floor 48: Output LM Head</span>
-        <span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">152K Logits</span>
-      </div>
-      <div onclick="selectPubFloor(36)" id="pub-floor-36" style="padding: 8px 12px; border-radius: 8px; border: 1px solid #313244; background: #1e1e2e; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.8rem; font-weight: bold; color: #cdd6f4;">Floors 33–47: Abstract Reasoning</span>
-        <span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">Tool Logic</span>
-      </div>
-      <div onclick="selectPubFloor(24)" id="pub-floor-24" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(16,185,129,0.4); background: rgba(16,185,129,0.1); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.8rem; font-weight: bold; color: #34d399;">Floors 17–32: Factual FFN Memory</span>
-        <span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">Paris/France</span>
-      </div>
-      <div onclick="selectPubFloor(8)" id="pub-floor-8" style="padding: 8px 12px; border-radius: 8px; border: 1px solid #313244; background: #1e1e2e; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.8rem; font-weight: bold; color: #cdd6f4;">Floors 2–16: Syntax & Grammar</span>
-        <span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">Code AST</span>
-      </div>
-      <div onclick="selectPubFloor(1)" id="pub-floor-1" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(99,102,241,0.4); background: rgba(99,102,241,0.1); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 0.8rem; font-weight: bold; color: #818cf8;">Floor 1: Embedding Entry Gate</span>
-        <span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">5120D Table</span>
-      </div>
-    </div>
-
-    <!-- Details Column -->
-    <div style="background: #11111b; border: 1px solid #313244; border-radius: 10px; padding: 1rem; display: flex; flex-direction: column; gap: 8px;">
-      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #313244; padding-bottom: 6px;">
-        <span id="pub-floor-badge" style="font-size: 0.75rem; font-family: monospace; padding: 2px 6px; border-radius: 4px; background: #10b981; color: white; font-weight: bold;">Floor 24</span>
-        <span style="font-size: 0.75rem; color: #a6adc8;">14 Billion Synapses</span>
-      </div>
-      <div id="pub-floor-desc" style="font-size: 0.8rem; color: #cdd6f4; line-height: 1.4;">
-        <strong>Where facts live!</strong> The Feed-Forward Network (FFN) connects concepts: <code>"capital of France"</code> → <code>"Paris"</code>.
-      </div>
-      <div style="font-size: 0.75rem; color: #a6adc8; margin-top: 4px;">Live Weight Synapse Sample:</div>
-      <div id="pub-weights-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; font-family: monospace; font-size: 0.75rem; text-align: center;">
-        <div style="padding: 4px; border-radius: 4px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #34d399;">+1.294</div>
-        <div style="padding: 4px; border-radius: 4px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #34d399;">+0.725</div>
-        <div style="padding: 4px; border-radius: 4px; background: #1e1e2e; border: 1px solid #313244; color: #a6adc8;">-0.942</div>
-        <div style="padding: 4px; border-radius: 4px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #34d399;">+0.841</div>
-      </div>
-    </div>
-  </div>
+<div class="widget-header">
+<span class="widget-title">🏢 Interactive Explorable: 48-Story Transformer Skyscraper</span>
+<button onclick="runPubSkyscraperPulse()" id="pub-pulse-btn" class="action-btn">▶️ Send Signal Up 48 Floors</button>
+</div>
+<p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Click any floor to inspect its inner weight matrices and see how geometric tension holds facts:</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px;">
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div onclick="selectPubFloor(48)" id="pub-floor-48" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(236,72,153,0.4); background: rgba(236,72,153,0.1); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+<span style="font-size: 0.8rem; font-weight: bold; color: #f472b6;">Floor 48: Output LM Head</span>
+<span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">152K Logits</span>
+</div>
+<div onclick="selectPubFloor(36)" id="pub-floor-36" style="padding: 8px 12px; border-radius: 8px; border: 1px solid #313244; background: #1e1e2e; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+<span style="font-size: 0.8rem; font-weight: bold; color: #cdd6f4;">Floors 33–47: Abstract Reasoning</span>
+<span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">Tool Logic</span>
+</div>
+<div onclick="selectPubFloor(24)" id="pub-floor-24" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(16,185,129,0.4); background: rgba(16,185,129,0.1); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+<span style="font-size: 0.8rem; font-weight: bold; color: #34d399;">Floors 17–32: Factual FFN Memory</span>
+<span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">Paris/France</span>
+</div>
+<div onclick="selectPubFloor(8)" id="pub-floor-8" style="padding: 8px 12px; border-radius: 8px; border: 1px solid #313244; background: #1e1e2e; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+<span style="font-size: 0.8rem; font-weight: bold; color: #cdd6f4;">Floors 2–16: Syntax & Grammar</span>
+<span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">Code AST</span>
+</div>
+<div onclick="selectPubFloor(1)" id="pub-floor-1" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(99,102,241,0.4); background: rgba(99,102,241,0.1); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+<span style="font-size: 0.8rem; font-weight: bold; color: #818cf8;">Floor 1: Embedding Entry Gate</span>
+<span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">5120D Table</span>
+</div>
+</div>
+<div style="background: #11111b; border: 1px solid #313244; border-radius: 10px; padding: 1rem; display: flex; flex-direction: column; gap: 8px;">
+<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #313244; padding-bottom: 6px;">
+<span id="pub-floor-badge" style="font-size: 0.75rem; font-family: monospace; padding: 2px 6px; border-radius: 4px; background: #10b981; color: white; font-weight: bold;">Floor 24</span>
+<span style="font-size: 0.75rem; color: #a6adc8;">14 Billion Synapses</span>
+</div>
+<div id="pub-floor-desc" style="font-size: 0.8rem; color: #cdd6f4; line-height: 1.4;">
+<strong>Where facts live!</strong> The Feed-Forward Network (FFN) connects concepts: <code>"capital of France"</code> → <code>"Paris"</code>.
+</div>
+<div style="font-size: 0.75rem; color: #a6adc8; margin-top: 4px;">Live Weight Synapse Sample:</div>
+<div id="pub-weights-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; font-family: monospace; font-size: 0.75rem; text-align: center;">
+<div style="padding: 4px; border-radius: 4px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #34d399;">+1.294</div>
+<div style="padding: 4px; border-radius: 4px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #34d399;">+0.725</div>
+<div style="padding: 4px; border-radius: 4px; background: #1e1e2e; border: 1px solid #313244; color: #a6adc8;">-0.942</div>
+<div style="padding: 4px; border-radius: 4px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; color: #34d399;">+0.841</div>
+</div>
+</div>
+</div>
 </div>
 
 ---
@@ -318,64 +293,63 @@ Why does `qwen2.5-coder:14b` run so fast on a Mac mini?
 In [[curriculum|Module 2]], we will explore:  
 **Tool Calling & The ReAct Execution Loop** — *How does a text model actually decide to execute Python functions, search the live web, and update Obsidian notes?*
 
-<!-- CLIENT SCRIPT TO POWER THE 4 EMBEDDED EXPLORABLE WIDGETS -->
+<!-- INLINE SCRIPT WITH QUARTZ SPA SUPPORT -->
 <script>
-  // 1. Vector Math Animation
-  function runPubVectorMath() {
-    const a1 = document.getElementById("pub-vec-arrow1");
-    const a2 = document.getElementById("pub-vec-arrow2");
-    const s = document.getElementById("pub-vec-status");
+  window.runPubVectorMath = function() {
+    var a1 = document.getElementById("pub-vec-arrow1");
+    var a2 = document.getElementById("pub-vec-arrow2");
+    var s = document.getElementById("pub-vec-status");
     if (!a1 || !a2 || !s) return;
-    
     a1.setAttribute("d", "M 140 50 L 140 190");
     a2.setAttribute("d", "M 140 190 L 280 190 L 280 50");
     a1.style.display = "block";
     s.innerHTML = '<span style="color: #a855f7; font-weight: bold;">Step 1:</span> Subtracting "Male" concept vector from King...';
-    
-    setTimeout(() => {
+    setTimeout(function() {
       a2.style.display = "block";
       s.innerHTML = '<span style="color: #ec4899; font-weight: bold;">Step 2:</span> Adding "Female" concept vector from Woman... <strong style="color: #34d399;">Result: Queen (99.2% Cosine Match)!</strong>';
     }, 1000);
-  }
+  };
 
-  // 2. Attention Spotlight
-  const pubAttnSentences = [
+  var pubAttnSentences = [
     { id: 1, words: ["The", "animal", "didn't", "cross", "the", "street", "because", "it", "was", "too", "tired."], target: 7, weights: {1: 0.894, 5: 0.052, 10: 0.041}, desc: 'Because the adjective is <strong>"tired"</strong>, the self-attention spotlight links <strong>"it"</strong> to <strong>"animal" (89.4%)</strong>!' },
     { id: 2, words: ["The", "animal", "didn't", "cross", "the", "street", "because", "it", "was", "too", "wide."], target: 7, weights: {5: 0.912, 1: 0.038, 10: 0.042}, desc: 'Because the adjective is <strong>"wide"</strong>, the self-attention spotlight links <strong>"it"</strong> to <strong>"street" (91.2%)</strong>!' }
   ];
-  let curPubAttnId = 1;
+  var curPubAttnId = 1;
 
-  function setPubAttentionSentence(id) {
+  window.setPubAttentionSentence = function(id) {
     curPubAttnId = id;
-    const b1 = document.getElementById("pub-attn-btn-1");
-    const b2 = document.getElementById("pub-attn-btn-2");
+    var b1 = document.getElementById("pub-attn-btn-1");
+    var b2 = document.getElementById("pub-attn-btn-2");
     if (b1 && b2) {
       b1.className = id === 1 ? "toggle-btn active" : "toggle-btn";
       b2.className = id === 2 ? "toggle-btn active" : "toggle-btn";
     }
-    const s = pubAttnSentences.find(x => x.id === id);
-    const row = document.getElementById("pub-attn-words-row");
-    if (!row) return;
-    row.innerHTML = s.words.map((w, idx) => {
-      const isTarget = idx === s.target;
-      const weight = s.weights[idx] || 0.01;
-      let cls = "interactive-pill";
+    var s = pubAttnSentences.find(function(x) { return x.id === id; });
+    var row = document.getElementById("pub-attn-words-row");
+    if (!row || !s) return;
+    row.innerHTML = s.words.map(function(w, idx) {
+      var isTarget = idx === s.target;
+      var weight = s.weights[idx] || 0.01;
+      var cls = "interactive-pill";
       if (isTarget) cls += " highlight-target";
       else if (weight > 0.5) cls += " highlight-connected";
-      return `<div onmouseenter="highlightPubAttn(${idx})" class="${cls}"><span>${w}</span>${weight > 0.05 ? `<span style="font-size: 0.65rem; opacity: 0.8;">${(weight*100).toFixed(0)}%</span>` : ''}</div>`;
+      return '<div onmouseenter="highlightPubAttn(' + idx + ')" class="' + cls + '"><span>' + w + '</span>' + (weight > 0.05 ? '<span style="font-size: 0.65rem; opacity: 0.8;">' + (weight*100).toFixed(0) + '%</span>' : '') + '</div>';
     }).join("");
-    document.getElementById("pub-attn-desc-text").innerHTML = s.desc;
-    document.getElementById("pub-attn-score-text").textContent = id === 1 ? "89.4% Connection" : "91.2% Connection";
-  }
+    var descEl = document.getElementById("pub-attn-desc-text");
+    var scoreEl = document.getElementById("pub-attn-score-text");
+    if (descEl) descEl.innerHTML = s.desc;
+    if (scoreEl) scoreEl.textContent = id === 1 ? "89.4% Connection" : "91.2% Connection";
+  };
 
-  function highlightPubAttn(idx) {
-    const s = pubAttnSentences.find(x => x.id === curPubAttnId);
-    const weight = s.weights[idx] || 0.01;
-    document.getElementById("pub-attn-score-text").textContent = (weight * 100).toFixed(1) + "% Connection";
-  }
+  window.highlightPubAttn = function(idx) {
+    var s = pubAttnSentences.find(function(x) { return x.id === curPubAttnId; });
+    if (!s) return;
+    var weight = s.weights[idx] || 0.01;
+    var scoreEl = document.getElementById("pub-attn-score-text");
+    if (scoreEl) scoreEl.textContent = (weight * 100).toFixed(1) + "% Connection";
+  };
 
-  // 3. Temperature Simulator
-  const pubCandTokens = [
+  var pubCandTokens = [
     { token: " Silicon", logit: 6.2 },
     { token: " M4", logit: 4.8 },
     { token: " Hardware", logit: 3.5 },
@@ -383,40 +357,29 @@ In [[curriculum|Module 2]], we will explore:
     { token: " Banana", logit: -2.5 }
   ];
 
-  function updatePubTemperature(val) {
-    const temp = (val / 100) || 0.01;
-    const badge = document.getElementById("pub-temp-badge");
-    let label = "Deterministic / Code";
+  window.updatePubTemperature = function(val) {
+    var temp = (val / 100) || 0.01;
+    var badge = document.getElementById("pub-temp-badge");
+    var label = "Deterministic / Code";
     if (temp > 0.5 && temp <= 0.9) label = "Balanced Conversation";
     if (temp > 0.9) label = "Creative / Hallucination";
-    if (badge) badge.textContent = `Temperature: ${temp.toFixed(2)} (${label})`;
+    if (badge) badge.textContent = "Temperature: " + temp.toFixed(2) + " (" + label + ")";
 
-    const exps = pubCandTokens.map(c => Math.exp(c.logit / temp));
-    const sum = exps.reduce((a, b) => a + b, 0);
-    const probs = exps.map(e => (e / sum) * 100);
+    var exps = pubCandTokens.map(function(c) { return Math.exp(c.logit / temp); });
+    var sum = exps.reduce(function(a, b) { return a + b; }, 0);
+    var probs = exps.map(function(e) { return (e / sum) * 100; });
 
-    const cont = document.getElementById("pub-temp-bars-container");
+    var cont = document.getElementById("pub-temp-bars-container");
     if (!cont) return;
-    cont.innerHTML = pubCandTokens.map((c, i) => {
-      const p = probs[i];
-      const isTop = i === 0;
-      const col = isTop ? "linear-gradient(90deg, #6366f1, #a855f7)" : (p > 5 ? "linear-gradient(90deg, #10b981, #34d399)" : "#4b5563");
-      return `
-        <div>
-          <div style="display: flex; justify-content: space-between; font-size: 0.75rem; font-family: monospace; margin-bottom: 2px;">
-            <span style="color: ${isTop ? '#818cf8; font-weight: bold;' : '#cdd6f4'}">${c.token}</span>
-            <span style="color: ${isTop ? '#34d399; font-weight: bold;' : '#a6adc8'}">${p.toFixed(1)}%</span>
-          </div>
-          <div style="height: 6px; width: 100%; background: #313244; border-radius: 3px; overflow: hidden;">
-            <div style="height: 100%; width: ${Math.max(1, p)}%; background: ${col}; border-radius: 3px; transition: width 0.2s ease;"></div>
-          </div>
-        </div>
-      `;
+    cont.innerHTML = pubCandTokens.map(function(c, i) {
+      var p = probs[i];
+      var isTop = i === 0;
+      var col = isTop ? "linear-gradient(90deg, #6366f1, #a855f7)" : (p > 5 ? "linear-gradient(90deg, #10b981, #34d399)" : "#4b5563");
+      return '<div><div style="display: flex; justify-content: space-between; font-size: 0.75rem; font-family: monospace; margin-bottom: 2px;"><span style="color: ' + (isTop ? '#818cf8; font-weight: bold;' : '#cdd6f4') + '">' + c.token + '</span><span style="color: ' + (isTop ? '#34d399; font-weight: bold;' : '#a6adc8') + '">' + p.toFixed(1) + '%</span></div><div style="height: 6px; width: 100%; background: #313244; border-radius: 3px; overflow: hidden;"><div style="height: 100%; width: ' + Math.max(1, p) + '%; background: ' + col + '; border-radius: 3px; transition: width 0.2s ease;"></div></div></div>';
     }).join("");
-  }
+  };
 
-  // 4. Skyscraper Floor Selector
-  const pubFloors = {
+  var pubFloors = {
     1: { badge: "Floor 1", col: "#6366f1", desc: "<strong>Floor 1 (Embedding Entry Gate):</strong> Converts integer token IDs into dense 5,120-dimensional semantic coordinate vectors via table lookup.", weights: ["+0.042", "-0.912", "+1.042", "+0.781"] },
     8: { badge: "Floors 2-16", col: "#3b82f6", desc: "<strong>Floors 2–16 (Syntax & Local Grammar):</strong> Analyzes punctuation, Python indentation, bracket matching, and local relationships.", weights: ["+1.082", "-0.012", "+0.924", "+0.841"] },
     24: { badge: "Floors 17-32", col: "#10b981", desc: "<strong>Floors 17–32 (Factual FFN Memory Banks):</strong> Where facts live! Connects concepts: <code>capital of France</code> → <code>Paris</code>.", weights: ["+1.294", "+0.725", "-0.942", "+0.841"] },
@@ -424,46 +387,44 @@ In [[curriculum|Module 2]], we will explore:
     48: { badge: "Floor 48", col: "#ec4899", desc: "<strong>Floor 48 (Output LM Head):</strong> Projects final 5,120D mathematical vector back into raw logits across all 152,064 vocabulary tokens.", weights: ["+6.200", "+4.800", "+3.500", "-2.500"] }
   };
 
-  function selectPubFloor(f) {
-    const data = pubFloors[f] || pubFloors[24];
-    [1, 8, 24, 36, 48].forEach(x => {
-      const el = document.getElementById("pub-floor-" + x);
+  window.selectPubFloor = function(f) {
+    var data = pubFloors[f] || pubFloors[24];
+    [1, 8, 24, 36, 48].forEach(function(x) {
+      var el = document.getElementById("pub-floor-" + x);
       if (el) el.style.borderColor = x === f ? data.col : "#313244";
     });
-    const b = document.getElementById("pub-floor-badge");
-    const d = document.getElementById("pub-floor-desc");
-    const g = document.getElementById("pub-weights-grid");
+    var b = document.getElementById("pub-floor-badge");
+    var d = document.getElementById("pub-floor-desc");
+    var g = document.getElementById("pub-weights-grid");
     if (b) { b.textContent = data.badge; b.style.background = data.col; }
     if (d) d.innerHTML = data.desc;
-    if (g) g.innerHTML = data.weights.map(w => `<div style="padding: 4px; border-radius: 4px; background: rgba(255,255,255,0.05); border: 1px solid ${data.col}; color: #cdd6f4;">${w}</div>`).join("");
-  }
+    if (g) g.innerHTML = data.weights.map(function(w) { return '<div style="padding: 4px; border-radius: 4px; background: rgba(255,255,255,0.05); border: 1px solid ' + data.col + '; color: #cdd6f4;">' + w + '</div>'; }).join("");
+  };
 
-  function runPubSkyscraperPulse() {
-    const arr = [1, 8, 24, 36, 48];
-    let step = 0;
-    const btn = document.getElementById("pub-pulse-btn");
-    btn.textContent = "Signal Ascending Floors...";
-    const interval = setInterval(() => {
+  window.runPubSkyscraperPulse = function() {
+    var arr = [1, 8, 24, 36, 48];
+    var step = 0;
+    var btn = document.getElementById("pub-pulse-btn");
+    if (btn) btn.textContent = "Signal Ascending Floors...";
+    var interval = setInterval(function() {
       if (step < arr.length) {
-        selectPubFloor(arr[step]);
+        window.selectPubFloor(arr[step]);
         step++;
       } else {
         clearInterval(interval);
-        btn.textContent = "Output: ' Silicon' (92.4%)!";
-        setTimeout(() => { btn.textContent = "▶️ Send Signal Up 48 Floors"; }, 2500);
+        if (btn) btn.textContent = "Output: ' Silicon' (92.4%)!";
+        setTimeout(function() { if (btn) btn.textContent = "▶️ Send Signal Up 48 Floors"; }, 2500);
       }
     }, 600);
+  };
+
+  function initPubWidgets() {
+    if (typeof window.setPubAttentionSentence === "function") window.setPubAttentionSentence(1);
+    if (typeof window.updatePubTemperature === "function") window.updatePubTemperature(20);
+    if (typeof window.selectPubFloor === "function") window.selectPubFloor(24);
   }
 
-  // Init on load
-  document.addEventListener("DOMContentLoaded", () => {
-    setPubAttentionSentence(1);
-    updatePubTemperature(20);
-    selectPubFloor(24);
-  });
-  if (document.readyState === "complete" || document.readyState === "interactive") {
-    setPubAttentionSentence(1);
-    updatePubTemperature(20);
-    selectPubFloor(24);
-  }
+  initPubWidgets();
+  document.addEventListener("DOMContentLoaded", initPubWidgets);
+  document.addEventListener("nav", initPubWidgets);
 </script>
