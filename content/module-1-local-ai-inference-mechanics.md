@@ -279,6 +279,63 @@ Why does `qwen2.5-coder:14b` run so fast on a Mac mini?
 
 ---
 
+## 🎛️ The 4 Control Panels: What You Can (and Cannot) Control in a Base Model
+
+When running `qwen2.5-coder:14b` locally, what can you actually adjust, and what is permanently locked?
+
+```mermaid
+flowchart TD
+    subgraph ControlPanels["🎛️ What You Control at Runtime"]
+        A["1. Sampling Controls<br/>(Temperature, Top-P, Top-K, Repeat Penalty)"]
+        B["2. Hardware & Context<br/>(Context Length 'num_ctx', Metal GPU Layers)"]
+        C["3. Guardrails & Stops<br/>(Stop Sequences, Max Output Tokens)"]
+        D["4. Conditioning & System<br/>(System Prompts, Injected Memories)"]
+    end
+
+    subgraph FrozenCore["🧊 What is FROZEN inside the .GGUF File"]
+        F1["14 Billion Floating-Point Weights"]
+        F2["152,064 Word Vocabulary Dictionary"]
+        F3["48-Floor Transformer Layer Stack"]
+    end
+
+    ControlPanels --> FrozenCore
+```
+
+### 1. Sampling Controls (The Roulette Wheel)
+* **`temperature`** ($0.0 - 1.5$): Controls randomness. $0.1$ = strict frozen math for code/tools; $0.8$ = creative flow.
+* **`top_p`** (Nucleus Sampling, $0.0 - 1.0$): Only considers candidate words within the top cumulative probability (e.g. $0.90$ discards the bottom 10% strange words).
+* **`top_k`** (e.g., $20 - 100$): Hard ceiling—only considers the top $K$ candidate tokens.
+* **`repeat_penalty`** (e.g., $1.1$): Mathematically penalizes tokens already generated to prevent infinite loops.
+
+### 2. Hardware & Context Allocation
+* **`num_ctx`** (Context Window): How many historical tokens the model can remember at once (e.g., $8,192$ to $32,768$). Higher context allocates more RAM for the **KV-Cache**.
+* **`num_gpu`** (GPU Layer Offload): How many of the 48 floors run on Apple Metal GPU vs CPU ($999 = 100\%$ Metal GPU).
+* **`num_thread`**: CPU thread allocation for prompt preprocessing.
+
+### 3. Guardrails & Stopping Controls
+* **`stop` sequences** (e.g., `["\nObservation:", "<|im_end|>", "```"]`): Hard brakes! The millisecond the model produces this symbol, generation halts immediately. This is critical for agent tool calling.
+* **`max_tokens`**: The upper ceiling of tokens generated in a single response turn.
+
+### 4. Conditioning & Steering
+* **`system_prompt`**: Injected at Floor 1 before any user messages to dictate the agent's rules, persona, and tool format.
+* **`seed`**: Fixing `seed = 42` with `temperature = 0` produces **100% bit-for-bit deterministic outputs** every time.
+
+```python
+from langchain_ollama import ChatOllama
+
+# Configuring the base model control panel in code:
+llm = ChatOllama(
+    model="qwen2.5-coder:14b",
+    temperature=0.1,         # Strict deterministic coding mode
+    top_p=0.9,               # Cut off unlikely tail tokens
+    repeat_penalty=1.1,      # Prevent repetitive loops
+    num_ctx=16384,           # 16,384 token context window in RAM
+    stop=["<|im_end|>", "Observation:"] # Emergency stop brakes
+)
+```
+
+---
+
 ## 🎯 Key Takeaways from Module 1
 
 1. **A Model is a Matrix File**: A `.gguf` file is metadata + vocabulary + billions of floating-point numbers.
