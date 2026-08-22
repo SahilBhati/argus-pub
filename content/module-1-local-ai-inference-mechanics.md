@@ -128,21 +128,21 @@ $$\text{Vector}(\text{"King"}) - \text{Vector}(\text{"Man"}) + \text{Vector}(\te
 <span class="widget-title">🎮 Interactive Explorable: Conceptual Vector Math</span>
 <button onclick="runPubVectorMath()" class="action-btn">▶️ Run Vector Math: King - Man + Woman = Queen</button>
 </div>
-<p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Click the button to see the laser vector lines calculate conceptual arithmetic live in 2D space:</p>
-<div style="background: #11111b; border: 1px solid #313244; border-radius: 10px; height: 260px; position: relative; overflow: hidden;">
+<p style="font-size: 0.85rem; color: var(--darkgray); margin-bottom: 0.75rem;">Click the button to see the laser vector lines calculate conceptual arithmetic live in 2D space:</p>
+<div style="background: var(--light); border: 1px solid var(--lightgray); border-radius: 10px; height: 260px; position: relative; overflow: hidden;">
 <svg id="pub-vector-svg" style="width: 100%; height: 100%;" viewBox="0 0 650 240">
-<line x1="30" y1="120" x2="620" y2="120" stroke="#313244" stroke-dasharray="4" />
-<line x1="325" y1="20" x2="325" y2="220" stroke="#313244" stroke-dasharray="4" />
-<g transform="translate(140, 50)"><circle r="14" fill="#6366f1" fill-opacity="0.3" stroke="#6366f1" stroke-width="2" /><text y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">👑 King</text></g>
-<g transform="translate(280, 50)"><circle r="14" fill="#ec4899" fill-opacity="0.3" stroke="#ec4899" stroke-width="2" /><text y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">👸 Queen</text></g>
-<g transform="translate(140, 190)"><circle r="14" fill="#3b82f6" fill-opacity="0.3" stroke="#3b82f6" stroke-width="2" /><text y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">👨 Man</text></g>
-<g transform="translate(280, 190)"><circle r="14" fill="#f43f5e" fill-opacity="0.3" stroke="#f43f5e" stroke-width="2" /><text y="4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">👩 Woman</text></g>
-<g transform="translate(500, 50)"><circle r="12" fill="#10b981" fill-opacity="0.3" stroke="#10b981" stroke-width="2" /><text y="4" text-anchor="middle" fill="#a7f3d0" font-size="9" font-family="monospace">def</text></g>
-<g transform="translate(560, 80)"><circle r="12" fill="#10b981" fill-opacity="0.3" stroke="#10b981" stroke-width="2" /><text y="4" text-anchor="middle" fill="#a7f3d0" font-size="9" font-family="monospace">return</text></g>
+<line x1="30" y1="120" x2="620" y2="120" stroke="var(--lightgray)" stroke-dasharray="4" />
+<line x1="325" y1="20" x2="325" y2="220" stroke="var(--lightgray)" stroke-dasharray="4" />
+<g transform="translate(140, 50)"><circle r="14" fill="#6366f1" fill-opacity="0.25" stroke="#6366f1" stroke-width="2" /><text y="4" text-anchor="middle" fill="var(--dark)" font-size="10" font-weight="bold">👑 King</text></g>
+<g transform="translate(280, 50)"><circle r="14" fill="#ec4899" fill-opacity="0.25" stroke="#ec4899" stroke-width="2" /><text y="4" text-anchor="middle" fill="var(--dark)" font-size="10" font-weight="bold">👸 Queen</text></g>
+<g transform="translate(140, 190)"><circle r="14" fill="#3b82f6" fill-opacity="0.25" stroke="#3b82f6" stroke-width="2" /><text y="4" text-anchor="middle" fill="var(--dark)" font-size="10" font-weight="bold">👨 Man</text></g>
+<g transform="translate(280, 190)"><circle r="14" fill="#f43f5e" fill-opacity="0.25" stroke="#f43f5e" stroke-width="2" /><text y="4" text-anchor="middle" fill="var(--dark)" font-size="10" font-weight="bold">👩 Woman</text></g>
+<g transform="translate(500, 50)"><circle r="12" fill="#10b981" fill-opacity="0.25" stroke="#10b981" stroke-width="2" /><text y="4" text-anchor="middle" fill="#059669" font-size="9" font-family="monospace">def</text></g>
+<g transform="translate(560, 80)"><circle r="12" fill="#10b981" fill-opacity="0.25" stroke="#10b981" stroke-width="2" /><text y="4" text-anchor="middle" fill="#059669" font-size="9" font-family="monospace">return</text></g>
 <path id="pub-vec-arrow1" d="" stroke="#a855f7" stroke-width="3" fill="none" style="display: none;" />
 <path id="pub-vec-arrow2" d="" stroke="#ec4899" stroke-width="3" fill="none" style="display: none;" />
 </svg>
-<div id="pub-vec-status" style="position: absolute; bottom: 8px; left: 12px; right: 12px; background: rgba(24, 24, 37, 0.9); border: 1px solid #313244; padding: 6px 12px; border-radius: 6px; font-size: 0.75rem; color: #a6adc8;">Click "Run Vector Math" to watch concept vectors calculate live.</div>
+<div id="pub-vec-status" style="position: absolute; bottom: 8px; left: 12px; right: 12px; background: var(--light); border: 1px solid var(--lightgray); padding: 6px 12px; border-radius: 6px; font-size: 0.75rem; color: var(--dark);">Click "Run Vector Math" to watch concept vectors calculate live.</div>
 </div>
 </div>
 
@@ -165,12 +165,12 @@ Consider these two sentences:
 <button onclick="setPubAttentionSentence(2)" id="pub-attn-btn-2" class="toggle-btn">Sentence B (Wide)</button>
 </div>
 </div>
-<p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Hover or tap on any word below to see the mathematical spotlight of attention calculate connection scores:</p>
-<div style="background: #11111b; border: 1px solid #313244; border-radius: 10px; padding: 1.25rem;">
+<p style="font-size: 0.85rem; color: var(--darkgray); margin-bottom: 0.75rem;">Hover or tap on any word below to see the mathematical spotlight of attention calculate connection scores:</p>
+<div style="background: var(--light); border: 1px solid var(--lightgray); border-radius: 10px; padding: 1.25rem;">
 <div id="pub-attn-words-row" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 1rem 0;"></div>
-<div id="pub-attn-desc-box" style="background: #181825; border: 1px solid #313244; border-radius: 8px; padding: 8px 12px; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
+<div id="pub-attn-desc-box" style="background: var(--light); border: 1px solid var(--lightgray); border-radius: 8px; padding: 8px 12px; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
 <span id="pub-attn-desc-text">Hover over <strong>"it"</strong> to inspect attention connection weights.</span>
-<span id="pub-attn-score-text" style="font-family: ui-monospace, monospace; color: #34d399; font-weight: bold;">89.4% Connection</span>
+<span id="pub-attn-score-text" style="font-family: var(--codeFont); color: #10b981; font-weight: bold;">89.4% Connection</span>
 </div>
 </div>
 </div>
@@ -187,15 +187,15 @@ Before picking the next word, the model calculates probability slices across all
 <span class="widget-title">🎲 Interactive Explorable: Temperature Probability Wheel</span>
 <span id="pub-temp-badge" class="widget-badge">Temperature: 0.20 (Precise / Code)</span>
 </div>
-<p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Drag the slider below to see how temperature flattens or freezes next-token candidate probabilities:</p>
-<div style="background: #11111b; border: 1px solid #313244; border-radius: 10px; padding: 1.25rem; margin-bottom: 0.75rem;">
+<p style="font-size: 0.85rem; color: var(--darkgray); margin-bottom: 0.75rem;">Drag the slider below to see how temperature flattens or freezes next-token candidate probabilities:</p>
+<div style="background: var(--light); border: 1px solid var(--lightgray); border-radius: 10px; padding: 1.25rem; margin-bottom: 0.75rem;">
 <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
-<span style="font-size: 0.75rem; color: #a6adc8;">0.0 (Cold)</span>
+<span style="font-size: 0.75rem; color: var(--darkgray);">0.0 (Cold)</span>
 <input type="range" id="pub-temp-slider" min="1" max="150" value="20" oninput="updatePubTemperature(this.value)" style="flex: 1; accent-color: #ec4899; cursor: pointer;">
-<span style="font-size: 0.75rem; color: #a6adc8;">1.5 (Hot)</span>
+<span style="font-size: 0.75rem; color: var(--darkgray);">1.5 (Hot)</span>
 </div>
-<div style="font-size: 0.8rem; color: #cdd6f4; margin-bottom: 0.5rem;">
-Prompt: <code style="color: #818cf8;">"Argus runs locally on Apple"</code> → Next Candidate Tokens:
+<div style="font-size: 0.8rem; color: var(--dark); margin-bottom: 0.5rem;">
+Prompt: <code style="color: var(--secondary);">"Argus runs locally on Apple"</code> → Next Candidate Tokens:
 </div>
 <div id="pub-temp-bars-container" style="display: flex; flex-direction: column; gap: 8px;"></div>
 </div>
@@ -213,43 +213,43 @@ Inside `qwen2.5-coder:14b`, the computation flows upward through a **48-floor sk
 <span class="widget-title">🏢 Interactive Explorable: 48-Story Transformer Skyscraper & Synaptic Volume Dials</span>
 <button onclick="runPubSkyscraperPulse()" id="pub-pulse-btn" class="action-btn">▶️ Send Signal Up 48 Floors</button>
 </div>
-<p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 0.75rem;">Click any floor to see what its machinery does and how <strong>numeric volume dials (weights)</strong> amplify or silence concepts:</p>
+<p style="font-size: 0.85rem; color: var(--darkgray); margin-bottom: 0.75rem;">Click any floor to see what its machinery does and how <strong>numeric volume dials (weights)</strong> amplify or silence concepts:</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px;">
 <div style="display: flex; flex-direction: column; gap: 6px;">
-<div onclick="selectPubFloor(48)" id="pub-floor-48" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(236,72,153,0.4); background: rgba(236,72,153,0.1); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-<span style="font-size: 0.8rem; font-weight: bold; color: #f472b6;">Floor 48: Output LM Head</span>
-<span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">152K Logits</span>
+<div onclick="selectPubFloor(48)" id="pub-floor-48" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(236,72,153,0.4); background: rgba(236,72,153,0.08); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+<span style="font-size: 0.8rem; font-weight: bold; color: #ec4899;">Floor 48: Output LM Head</span>
+<span style="font-size: 0.7rem; color: var(--darkgray); font-family: var(--codeFont);">152K Logits</span>
 </div>
-<div onclick="selectPubFloor(36)" id="pub-floor-36" style="padding: 8px 12px; border-radius: 8px; border: 1px solid #313244; background: #1e1e2e; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-<span style="font-size: 0.8rem; font-weight: bold; color: #cdd6f4;">Floors 33–47: Abstract Reasoning</span>
-<span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">Tool Logic</span>
+<div onclick="selectPubFloor(36)" id="pub-floor-36" style="padding: 8px 12px; border-radius: 8px; border: 1px solid var(--lightgray); background: var(--light); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+<span style="font-size: 0.8rem; font-weight: bold; color: var(--dark);">Floors 33–47: Abstract Reasoning</span>
+<span style="font-size: 0.7rem; color: var(--darkgray); font-family: var(--codeFont);">Tool Logic</span>
 </div>
-<div onclick="selectPubFloor(24)" id="pub-floor-24" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(16,185,129,0.4); background: rgba(16,185,129,0.1); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-<span style="font-size: 0.8rem; font-weight: bold; color: #34d399;">Floors 17–32: Factual FFN Memory</span>
-<span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">Paris/France</span>
+<div onclick="selectPubFloor(24)" id="pub-floor-24" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(16,185,129,0.4); background: rgba(16,185,129,0.08); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+<span style="font-size: 0.8rem; font-weight: bold; color: #10b981;">Floors 17–32: Factual FFN Memory</span>
+<span style="font-size: 0.7rem; color: var(--darkgray); font-family: var(--codeFont);">Paris/France</span>
 </div>
-<div onclick="selectPubFloor(8)" id="pub-floor-8" style="padding: 8px 12px; border-radius: 8px; border: 1px solid #313244; background: #1e1e2e; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-<span style="font-size: 0.8rem; font-weight: bold; color: #cdd6f4;">Floors 2–16: Syntax & Grammar</span>
-<span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">Code AST</span>
+<div onclick="selectPubFloor(8)" id="pub-floor-8" style="padding: 8px 12px; border-radius: 8px; border: 1px solid var(--lightgray); background: var(--light); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+<span style="font-size: 0.8rem; font-weight: bold; color: var(--dark);">Floors 2–16: Syntax & Grammar</span>
+<span style="font-size: 0.7rem; color: var(--darkgray); font-family: var(--codeFont);">Code AST</span>
 </div>
-<div onclick="selectPubFloor(1)" id="pub-floor-1" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(99,102,241,0.4); background: rgba(99,102,241,0.1); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-<span style="font-size: 0.8rem; font-weight: bold; color: #818cf8;">Floor 1: Embedding Entry Gate</span>
-<span style="font-size: 0.7rem; color: #a6adc8; font-family: monospace;">5120D Table</span>
+<div onclick="selectPubFloor(1)" id="pub-floor-1" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(99,102,241,0.4); background: rgba(99,102,241,0.08); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+<span style="font-size: 0.8rem; font-weight: bold; color: #6366f1;">Floor 1: Embedding Entry Gate</span>
+<span style="font-size: 0.7rem; color: var(--darkgray); font-family: var(--codeFont);">5120D Table</span>
 </div>
 </div>
-<div style="background: #11111b; border: 1px solid #313244; border-radius: 10px; padding: 1rem; display: flex; flex-direction: column; gap: 8px;">
-<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #313244; padding-bottom: 6px;">
-<span id="pub-floor-badge" style="font-size: 0.75rem; font-family: monospace; padding: 2px 6px; border-radius: 4px; background: #10b981; color: white; font-weight: bold;">Floor 24</span>
-<span style="font-size: 0.75rem; color: #a6adc8;">14 Billion Synapses</span>
+<div style="background: var(--light); border: 1px solid var(--lightgray); border-radius: 10px; padding: 1rem; display: flex; flex-direction: column; gap: 8px;">
+<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--lightgray); padding-bottom: 6px;">
+<span id="pub-floor-badge" style="font-size: 0.75rem; font-family: var(--codeFont); padding: 2px 6px; border-radius: 4px; background: #10b981; color: white; font-weight: bold;">Floor 24</span>
+<span style="font-size: 0.75rem; color: var(--darkgray);">14 Billion Synapses</span>
 </div>
-<div id="pub-floor-desc" style="font-size: 0.8rem; color: #cdd6f4; line-height: 1.4;">
+<div id="pub-floor-desc" style="font-size: 0.8rem; color: var(--dark); line-height: 1.4;">
 <strong>Where facts live!</strong> The Feed-Forward Network (FFN) connects concepts: <code>"capital of France"</code> → <code>"Paris"</code>.
 </div>
-<div style="font-size: 0.75rem; color: #a6adc8; margin-top: 4px; font-weight: 600;">🎛️ Sample Synaptic Volume Dials (Hover or click to inspect):</div>
+<div style="font-size: 0.75rem; color: var(--darkgray); margin-top: 4px; font-weight: 600;">🎛️ Sample Synaptic Volume Dials (Hover or click to inspect):</div>
 <div id="pub-weights-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; font-size: 0.75rem;">
 <!-- Populated dynamically by JavaScript -->
 </div>
-<div id="pub-dial-inspector" style="background: #181825; border: 1px solid #313244; border-radius: 6px; padding: 8px 10px; font-size: 0.75rem; color: #a6adc8;">
+<div id="pub-dial-inspector" style="background: var(--light); border: 1px solid var(--lightgray); border-radius: 6px; padding: 8px 10px; font-size: 0.75rem; color: var(--dark);">
 💡 Hover over any volume dial above to see what it amplifies or mutes!
 </div>
 </div>
@@ -409,86 +409,86 @@ Test your knowledge on how local LLMs, weights, attention spotlights, and Apple 
 <span id="pub-quiz-score" class="widget-badge">Score: 0 / 5</span>
 </div>
 
-<p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 1rem;">Select the correct answer for each question below to test your mastery:</p>
+<p style="font-size: 0.85rem; color: var(--darkgray); margin-bottom: 1rem;">Select the correct answer for each question below to test your mastery:</p>
 
 <div style="display: flex; flex-direction: column; gap: 14px;">
 
 <!-- QUESTION 1 -->
-<div class="quiz-card" style="background: #11111b; border: 1px solid #313244; border-radius: 8px; padding: 1rem;">
-<div style="font-weight: 600; font-size: 0.85rem; color: #f5e0dc; margin-bottom: 0.5rem;">
+<div class="quiz-card">
+<div style="font-weight: 600; font-size: 0.875rem; color: var(--dark); margin-bottom: 0.5rem;">
 1. Where does an LLM like <code>qwen2.5-coder:14b</code> store factual knowledge like <em>"Paris is the capital of France"</em>?
 </div>
 <div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem;">
-<button onclick="answerQuiz(1, 'A')" id="q1-opt-A" class="toggle-btn" style="text-align: left; padding: 6px 10px;">A) In an embedded SQLite database inside the .gguf file</button>
-<button onclick="answerQuiz(1, 'B')" id="q1-opt-B" class="toggle-btn" style="text-align: left; padding: 6px 10px;">B) As geometric attraction within 14 billion frozen floating-point synaptic weights (volume dials)</button>
-<button onclick="answerQuiz(1, 'C')" id="q1-opt-C" class="toggle-btn" style="text-align: left; padding: 6px 10px;">C) By searching the live internet during inference</button>
-<button onclick="answerQuiz(1, 'D')" id="q1-opt-D" class="toggle-btn" style="text-align: left; padding: 6px 10px;">D) In a text dictionary of pre-written English sentences</button>
+<button onclick="answerQuiz(1, 'A')" id="q1-opt-A" class="toggle-btn" style="text-align: left; padding: 8px 12px;">A) In an embedded SQLite database inside the .gguf file</button>
+<button onclick="answerQuiz(1, 'B')" id="q1-opt-B" class="toggle-btn" style="text-align: left; padding: 8px 12px;">B) As geometric attraction within 14 billion frozen floating-point synaptic weights (volume dials)</button>
+<button onclick="answerQuiz(1, 'C')" id="q1-opt-C" class="toggle-btn" style="text-align: left; padding: 8px 12px;">C) By searching the live internet during inference</button>
+<button onclick="answerQuiz(1, 'D')" id="q1-opt-D" class="toggle-btn" style="text-align: left; padding: 8px 12px;">D) In a text dictionary of pre-written English sentences</button>
 </div>
-<div id="q1-feedback" style="display: none; margin-top: 6px; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem;"></div>
+<div id="q1-feedback" style="display: none; margin-top: 6px; padding: 8px 12px; border-radius: 6px; font-size: 0.775rem;"></div>
 </div>
 
 <!-- QUESTION 2 -->
-<div class="quiz-card" style="background: #11111b; border: 1px solid #313244; border-radius: 8px; padding: 1rem;">
-<div style="font-weight: 600; font-size: 0.85rem; color: #f5e0dc; margin-bottom: 0.5rem;">
+<div class="quiz-card">
+<div style="font-weight: 600; font-size: 0.875rem; color: var(--dark); margin-bottom: 0.5rem;">
 2. In coordinate embedding space, what is the conceptual arithmetic result of: <br/><code>Vector("King") - Vector("Man") + Vector("Woman")</code>?
 </div>
 <div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem;">
-<button onclick="answerQuiz(2, 'A')" id="q2-opt-A" class="toggle-btn" style="text-align: left; padding: 6px 10px;">A) Vector("Queen")</button>
-<button onclick="answerQuiz(2, 'B')" id="q2-opt-B" class="toggle-btn" style="text-align: left; padding: 6px 10px;">B) Vector("Prince")</button>
-<button onclick="answerQuiz(2, 'C')" id="q2-opt-C" class="toggle-btn" style="text-align: left; padding: 6px 10px;">C) Vector("Castle")</button>
-<button onclick="answerQuiz(2, 'D')" id="q2-opt-D" class="toggle-btn" style="text-align: left; padding: 6px 10px;">D) A random meaningless coordinate</button>
+<button onclick="answerQuiz(2, 'A')" id="q2-opt-A" class="toggle-btn" style="text-align: left; padding: 8px 12px;">A) Vector("Queen")</button>
+<button onclick="answerQuiz(2, 'B')" id="q2-opt-B" class="toggle-btn" style="text-align: left; padding: 8px 12px;">B) Vector("Prince")</button>
+<button onclick="answerQuiz(2, 'C')" id="q2-opt-C" class="toggle-btn" style="text-align: left; padding: 8px 12px;">C) Vector("Castle")</button>
+<button onclick="answerQuiz(2, 'D')" id="q2-opt-D" class="toggle-btn" style="text-align: left; padding: 8px 12px;">D) A random meaningless coordinate</button>
 </div>
-<div id="q2-feedback" style="display: none; margin-top: 6px; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem;"></div>
+<div id="q2-feedback" style="display: none; margin-top: 6px; padding: 8px 12px; border-radius: 6px; font-size: 0.775rem;"></div>
 </div>
 
 <!-- QUESTION 3 -->
-<div class="quiz-card" style="background: #11111b; border: 1px solid #313244; border-radius: 8px; padding: 1rem;">
-<div style="font-weight: 600; font-size: 0.85rem; color: #f5e0dc; margin-bottom: 0.5rem;">
+<div class="quiz-card">
+<div style="font-weight: 600; font-size: 0.875rem; color: var(--dark); margin-bottom: 0.5rem;">
 3. In the sentence <em>"The animal didn't cross the street because it was too tired"</em>, what determines why <strong>"it"</strong> connects to <strong>"animal"</strong>?
 </div>
 <div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem;">
-<button onclick="answerQuiz(3, 'A')" id="q3-opt-A" class="toggle-btn" style="text-align: left; padding: 6px 10px;">A) "animal" is the first noun in the sentence</button>
-<button onclick="answerQuiz(3, 'B')" id="q3-opt-B" class="toggle-btn" style="text-align: left; padding: 6px 10px;">B) The Self-Attention spotlight calculates a high mathematical affinity score between "it" and "animal" due to the context word "tired"</button>
-<button onclick="answerQuiz(3, 'C')" id="q3-opt-C" class="toggle-btn" style="text-align: left; padding: 6px 10px;">C) The tokenizer automatically removes pronouns</button>
-<button onclick="answerQuiz(3, 'D')" id="q3-opt-D" class="toggle-btn" style="text-align: left; padding: 6px 10px;">D) The model randomly guesses on every run</button>
+<button onclick="answerQuiz(3, 'A')" id="q3-opt-A" class="toggle-btn" style="text-align: left; padding: 8px 12px;">A) "animal" is the first noun in the sentence</button>
+<button onclick="answerQuiz(3, 'B')" id="q3-opt-B" class="toggle-btn" style="text-align: left; padding: 8px 12px;">B) The Self-Attention spotlight calculates a high mathematical affinity score between "it" and "animal" due to the context word "tired"</button>
+<button onclick="answerQuiz(3, 'C')" id="q3-opt-C" class="toggle-btn" style="text-align: left; padding: 8px 12px;">C) The tokenizer automatically removes pronouns</button>
+<button onclick="answerQuiz(3, 'D')" id="q3-opt-D" class="toggle-btn" style="text-align: left; padding: 8px 12px;">D) The model randomly guesses on every run</button>
 </div>
-<div id="q3-feedback" style="display: none; margin-top: 6px; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem;"></div>
+<div id="q3-feedback" style="display: none; margin-top: 6px; padding: 8px 12px; border-radius: 6px; font-size: 0.775rem;"></div>
 </div>
 
 <!-- QUESTION 4 -->
-<div class="quiz-card" style="background: #11111b; border: 1px solid #313244; border-radius: 8px; padding: 1rem;">
-<div style="font-weight: 600; font-size: 0.85rem; color: #f5e0dc; margin-bottom: 0.5rem;">
+<div class="quiz-card">
+<div style="font-weight: 600; font-size: 0.875rem; color: var(--dark); margin-bottom: 0.5rem;">
 4. When configuring an autonomous coding agent that must produce strict, deterministic Python code and valid tool calls, which <strong>temperature</strong> is optimal?
 </div>
 <div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem;">
-<button onclick="answerQuiz(4, 'A')" id="q4-opt-A" class="toggle-btn" style="text-align: left; padding: 6px 10px;">A) Temperature = 1.5 (High randomness & creative chaos)</button>
-<button onclick="answerQuiz(4, 'B')" id="q4-opt-B" class="toggle-btn" style="text-align: left; padding: 6px 10px;">B) Temperature = 0.8 (Creative poetry flow)</button>
-<button onclick="answerQuiz(4, 'C')" id="q4-opt-C" class="toggle-btn" style="text-align: left; padding: 6px 10px;">C) Temperature = 0.1 (Cold / near-deterministic probability wheel)</button>
-<button onclick="answerQuiz(4, 'D')" id="q4-opt-D" class="toggle-btn" style="text-align: left; padding: 6px 10px;">D) Temperature has no effect on tool calling</button>
+<button onclick="answerQuiz(4, 'A')" id="q4-opt-A" class="toggle-btn" style="text-align: left; padding: 8px 12px;">A) Temperature = 1.5 (High randomness & creative chaos)</button>
+<button onclick="answerQuiz(4, 'B')" id="q4-opt-B" class="toggle-btn" style="text-align: left; padding: 8px 12px;">B) Temperature = 0.8 (Creative poetry flow)</button>
+<button onclick="answerQuiz(4, 'C')" id="q4-opt-C" class="toggle-btn" style="text-align: left; padding: 8px 12px;">C) Temperature = 0.1 (Cold / near-deterministic probability wheel)</button>
+<button onclick="answerQuiz(4, 'D')" id="q4-opt-D" class="toggle-btn" style="text-align: left; padding: 8px 12px;">D) Temperature has no effect on tool calling</button>
 </div>
-<div id="q4-feedback" style="display: none; margin-top: 6px; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem;"></div>
+<div id="q4-feedback" style="display: none; margin-top: 6px; padding: 8px 12px; border-radius: 6px; font-size: 0.775rem;"></div>
 </div>
 
 <!-- QUESTION 5 -->
-<div class="quiz-card" style="background: #11111b; border: 1px solid #313244; border-radius: 8px; padding: 1rem;">
-<div style="font-weight: 600; font-size: 0.85rem; color: #f5e0dc; margin-bottom: 0.5rem;">
+<div class="quiz-card">
+<div style="font-weight: 600; font-size: 0.875rem; color: var(--dark); margin-bottom: 0.5rem;">
 5. Why does <strong>4-bit Quantization (<code>Q4_K_M</code>)</strong> allow a 14-Billion parameter model to run comfortably on a 24GB Apple Silicon Mac mini?
 </div>
 <div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem;">
-<button onclick="answerQuiz(5, 'A')" id="q5-opt-A" class="toggle-btn" style="text-align: left; padding: 6px 10px;">A) It compresses weights from 28 GB (FP16) to ~9.0 GB, leaving ~8.5 GB of free headroom for macOS and KV-Cache</button>
-<button onclick="answerQuiz(5, 'B')" id="q5-opt-B" class="toggle-btn" style="text-align: left; padding: 6px 10px;">B) It deletes 75% of the model's 48 floors</button>
-<button onclick="answerQuiz(5, 'C')" id="q5-opt-C" class="toggle-btn" style="text-align: left; padding: 6px 10px;">C) It runs exclusively on the CPU and ignores GPU memory</button>
-<button onclick="answerQuiz(5, 'D')" id="q5-opt-D" class="toggle-btn" style="text-align: left; padding: 6px 10px;">D) It converts the model into an MP3 audio file</button>
+<button onclick="answerQuiz(5, 'A')" id="q5-opt-A" class="toggle-btn" style="text-align: left; padding: 8px 12px;">A) It compresses weights from 28 GB (FP16) to ~9.0 GB, leaving ~8.5 GB of free headroom for macOS and KV-Cache</button>
+<button onclick="answerQuiz(5, 'B')" id="q5-opt-B" class="toggle-btn" style="text-align: left; padding: 8px 12px;">B) It deletes 75% of the model's 48 floors</button>
+<button onclick="answerQuiz(5, 'C')" id="q5-opt-C" class="toggle-btn" style="text-align: left; padding: 8px 12px;">C) It runs exclusively on the CPU and ignores GPU memory</button>
+<button onclick="answerQuiz(5, 'D')" id="q5-opt-D" class="toggle-btn" style="text-align: left; padding: 8px 12px;">D) It converts the model into an MP3 audio file</button>
 </div>
-<div id="q5-feedback" style="display: none; margin-top: 6px; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem;"></div>
+<div id="q5-feedback" style="display: none; margin-top: 6px; padding: 8px 12px; border-radius: 6px; font-size: 0.775rem;"></div>
 </div>
 
 </div>
 
 <!-- Final Result Banner -->
-<div id="quiz-final-banner" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px; background: rgba(16,185,129,0.15); border: 1px solid #10b981; text-align: center;">
-<div style="font-size: 1.1rem; font-weight: bold; color: #34d399;">🎉 Module 1 Passed with 100%!</div>
-<div style="font-size: 0.85rem; color: #cdd6f4; margin-top: 4px;">You have mastered Local AI Inference, Synaptic Weights, Attention Spotlights, and Apple Silicon Mechanics!</div>
+<div id="quiz-final-banner" style="display: none; margin-top: 1rem; padding: 1.25rem; border-radius: 10px; background: rgba(16,185,129,0.12); border: 1.5px solid #10b981; text-align: center;">
+<div style="font-size: 1.15rem; font-weight: bold; color: #10b981;">🎉 Module 1 Passed with 100%!</div>
+<div style="font-size: 0.85rem; color: var(--dark); margin-top: 4px;">You have mastered Local AI Inference, Synaptic Weights, Attention Spotlights, and Apple Silicon Mechanics!</div>
 </div>
 </div>
 
@@ -520,32 +520,35 @@ In [[curriculum|Module 2]], we will explore:
       var btn = document.getElementById("q" + qNum + "-opt-" + opt);
       if (!btn) return;
       if (opt === q.correct) {
-        btn.style.background = isCorrect || selected === opt ? "rgba(16,185,129,0.2)" : "#313244";
+        btn.style.background = isCorrect || selected === opt ? "rgba(16,185,129,0.18)" : "var(--light)";
         btn.style.borderColor = "#10b981";
-        btn.style.color = "#34d399";
+        btn.style.color = "#10b981";
+        btn.style.fontWeight = "bold";
       } else if (opt === selected && !isCorrect) {
-        btn.style.background = "rgba(239,68,68,0.2)";
+        btn.style.background = "rgba(239,68,68,0.15)";
         btn.style.borderColor = "#ef4444";
-        btn.style.color = "#f87171";
+        btn.style.color = "#ef4444";
+        btn.style.fontWeight = "bold";
       } else {
-        btn.style.background = "#313244";
-        btn.style.borderColor = "#45475a";
-        btn.style.color = "#a6adc8";
+        btn.style.background = "var(--light)";
+        btn.style.borderColor = "var(--lightgray)";
+        btn.style.color = "var(--darkgray)";
+        btn.style.fontWeight = "normal";
       }
     });
 
     if (fb) {
       fb.style.display = "block";
       if (isCorrect) {
-        fb.style.background = "rgba(16,185,129,0.15)";
+        fb.style.background = "rgba(16,185,129,0.12)";
         fb.style.border = "1px solid rgba(16,185,129,0.4)";
-        fb.style.color = "#34d399";
+        fb.style.color = "#059669";
         fb.innerHTML = q.expl;
         userQuizScores[qNum] = 1;
       } else {
-        fb.style.background = "rgba(239,68,68,0.15)";
+        fb.style.background = "rgba(239,68,68,0.12)";
         fb.style.border = "1px solid rgba(239,68,68,0.4)";
-        fb.style.color = "#f87171";
+        fb.style.color = "#dc2626";
         fb.innerHTML = "❌ <strong>Incorrect.</strong> Try reviewing the section above and select another option!";
         userQuizScores[qNum] = 0;
       }

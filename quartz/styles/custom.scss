@@ -442,21 +442,26 @@ details.deep-dive {
 /* 9. Standalone Interactive Explorable Widgets (Client-Side HTML5 / SVG)    */
 /* ========================================================================= */
 .explorable-widget {
-  background: #181825;
-  border: 1px solid #313244;
-  border-radius: 12px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 14px;
   padding: 1.5rem;
   margin: 1.75rem 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  color: #cdd6f4;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  color: var(--dark);
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    margin: 1.25rem 0;
+  }
 
   .widget-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #313244;
+    border-bottom: 1px solid var(--lightgray);
     padding-bottom: 0.75rem;
     margin-bottom: 1rem;
     flex-wrap: wrap;
@@ -465,7 +470,7 @@ details.deep-dive {
     .widget-title {
       font-weight: 700;
       font-size: 1rem;
-      color: #f5e0dc;
+      color: var(--dark);
       display: flex;
       align-items: center;
       gap: 8px;
@@ -473,30 +478,35 @@ details.deep-dive {
 
     .widget-badge {
       font-size: 0.75rem;
-      font-family: ui-monospace, monospace;
-      padding: 2px 8px;
+      font-family: var(--codeFont);
+      padding: 3px 9px;
       border-radius: 6px;
-      background: rgba(99, 102, 241, 0.2);
-      color: #818cf8;
-      border: 1px solid rgba(99, 102, 241, 0.4);
+      background: rgba(99, 102, 241, 0.12);
+      color: var(--secondary);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      font-weight: 600;
     }
   }
 
   .action-btn {
     background: linear-gradient(135deg, #6366f1, #a855f7);
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.825rem;
     font-weight: 600;
-    padding: 6px 14px;
+    padding: 8px 16px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+      box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
     }
 
     &:active {
@@ -505,33 +515,35 @@ details.deep-dive {
   }
 
   .toggle-btn {
-    background: #313244;
-    color: #a6adc8;
-    font-size: 0.75rem;
+    background: var(--light);
+    color: var(--darkgray);
+    font-size: 0.8rem;
     font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 6px;
-    border: 1px solid #45475a;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--lightgray);
     cursor: pointer;
     transition: all 0.15s ease;
+    min-height: 38px;
 
     &.active {
       background: #6366f1;
       color: white;
-      border-color: #818cf8;
+      border-color: #6366f1;
+      box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
     }
 
     &:hover:not(.active) {
-      background: #45475a;
-      color: #cdd6f4;
+      background: var(--lightgray);
+      color: var(--dark);
     }
   }
 
   .interactive-pill {
     padding: 8px 14px;
     border-radius: 10px;
-    border: 1px solid #313244;
-    font-family: ui-monospace, monospace;
+    border: 1px solid var(--lightgray);
+    font-family: var(--codeFont);
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
@@ -539,24 +551,38 @@ details.deep-dive {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    background: #1e1e2e;
-    color: #a6adc8;
+    background: var(--light);
+    color: var(--dark);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
 
     &:hover {
-      transform: scale(1.08);
+      transform: scale(1.06);
+      border-color: var(--secondary);
     }
 
     &.highlight-target {
       background: #6366f1;
       color: white;
-      border-color: #818cf8;
+      border-color: #6366f1;
       box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
     }
 
     &.highlight-connected {
-      background: rgba(16, 185, 129, 0.2);
-      color: #34d399;
+      background: rgba(16, 185, 129, 0.15);
+      color: #059669;
       border-color: rgba(16, 185, 129, 0.4);
+    }
+  }
+
+  .quiz-card {
+    background: var(--light);
+    border: 1px solid var(--lightgray);
+    border-radius: 10px;
+    padding: 1.15rem;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: rgba(99, 102, 241, 0.35);
     }
   }
 }
