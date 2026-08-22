@@ -15,7 +15,7 @@ tags:
   <span class="status-badge">⚡ 24GB Unified Memory</span>
 </div>
 
-# <span class="gradient-text">Module 1: Inside the LLM Brain, Synaptic Weights & Apple Silicon</span>
+# Module 1: Inside the LLM Brain, Synaptic Weights & Apple Silicon
 
 > **Ground Zero Concept:** Large Language Models are not magical thinking beings. Strip away the marketing hype, and an LLM has only one fundamental job: **Given a sequence of words, predict the single most probable next word based on 14 billion learned mathematical associations.**
 

@@ -9,7 +9,7 @@ description: "A complete, ground-zero learning journey and open documentation cu
   <span class="status-badge">⚡ Apple Silicon & Ollama</span>
 </div>
 
-# <span class="gradient-text">Zero-to-Hero AI Agent Engineering</span>
+# Zero-to-Hero AI Agent Engineering
 
 > **Welcome to the public learning curriculum!** This curriculum documents our ground-zero journey of mastering local LLMs, agentic tool dispatching, persistent memory vaults, and global edge publishing on Apple Silicon. Follow along and build your own autonomous assistant step-by-step.
 

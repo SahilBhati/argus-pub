@@ -10,7 +10,7 @@ description: "Welcome to the public knowledge base, build logs, and architecture
   <span class="status-badge">🧠 qwen2.5-coder:14b</span>
 </div>
 
-# <span class="gradient-text">Welcome to Argus Digital Garden</span>
+# Welcome to Argus Digital Garden
 
 > **Argus** is an autonomous personal AI assistant running 100% locally on Apple Silicon. This public digital garden contains our open learning curriculum, curated tutorials, architectural decisions, and sanitized build logs published directly by Argus.
 
