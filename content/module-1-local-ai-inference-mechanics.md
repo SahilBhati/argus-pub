@@ -345,6 +345,102 @@ llm = ChatOllama(
 
 ---
 
+## 🧪 Module 1 Mastery Quiz: Test Your Understanding
+
+Test your knowledge on how local LLMs, weights, attention spotlights, and Apple Silicon inference mechanics work:
+
+<!-- INTERACTIVE QUIZ WIDGET -->
+<div class="explorable-widget">
+<div class="widget-header">
+<span class="widget-title">🏆 Interactive Knowledge Check: Module 1</span>
+<span id="pub-quiz-score" class="widget-badge">Score: 0 / 5</span>
+</div>
+
+<p style="font-size: 0.85rem; color: #a6adc8; margin-bottom: 1rem;">Select the correct answer for each question below to test your mastery:</p>
+
+<div style="display: flex; flex-direction: column; gap: 14px;">
+
+<!-- QUESTION 1 -->
+<div class="quiz-card" style="background: #11111b; border: 1px solid #313244; border-radius: 8px; padding: 1rem;">
+<div style="font-weight: 600; font-size: 0.85rem; color: #f5e0dc; margin-bottom: 0.5rem;">
+1. Where does an LLM like <code>qwen2.5-coder:14b</code> store factual knowledge like <em>"Paris is the capital of France"</em>?
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem;">
+<button onclick="answerQuiz(1, 'A')" id="q1-opt-A" class="toggle-btn" style="text-align: left; padding: 6px 10px;">A) In an embedded SQLite database inside the .gguf file</button>
+<button onclick="answerQuiz(1, 'B')" id="q1-opt-B" class="toggle-btn" style="text-align: left; padding: 6px 10px;">B) As geometric attraction within 14 billion frozen floating-point synaptic weights (volume dials)</button>
+<button onclick="answerQuiz(1, 'C')" id="q1-opt-C" class="toggle-btn" style="text-align: left; padding: 6px 10px;">C) By searching the live internet during inference</button>
+<button onclick="answerQuiz(1, 'D')" id="q1-opt-D" class="toggle-btn" style="text-align: left; padding: 6px 10px;">D) In a text dictionary of pre-written English sentences</button>
+</div>
+<div id="q1-feedback" style="display: none; margin-top: 6px; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem;"></div>
+</div>
+
+<!-- QUESTION 2 -->
+<div class="quiz-card" style="background: #11111b; border: 1px solid #313244; border-radius: 8px; padding: 1rem;">
+<div style="font-weight: 600; font-size: 0.85rem; color: #f5e0dc; margin-bottom: 0.5rem;">
+2. In coordinate embedding space, what is the conceptual arithmetic result of: <br/><code>Vector("King") - Vector("Man") + Vector("Woman")</code>?
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem;">
+<button onclick="answerQuiz(2, 'A')" id="q2-opt-A" class="toggle-btn" style="text-align: left; padding: 6px 10px;">A) Vector("Queen")</button>
+<button onclick="answerQuiz(2, 'B')" id="q2-opt-B" class="toggle-btn" style="text-align: left; padding: 6px 10px;">B) Vector("Prince")</button>
+<button onclick="answerQuiz(2, 'C')" id="q2-opt-C" class="toggle-btn" style="text-align: left; padding: 6px 10px;">C) Vector("Castle")</button>
+<button onclick="answerQuiz(2, 'D')" id="q2-opt-D" class="toggle-btn" style="text-align: left; padding: 6px 10px;">D) A random meaningless coordinate</button>
+</div>
+<div id="q2-feedback" style="display: none; margin-top: 6px; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem;"></div>
+</div>
+
+<!-- QUESTION 3 -->
+<div class="quiz-card" style="background: #11111b; border: 1px solid #313244; border-radius: 8px; padding: 1rem;">
+<div style="font-weight: 600; font-size: 0.85rem; color: #f5e0dc; margin-bottom: 0.5rem;">
+3. In the sentence <em>"The animal didn't cross the street because it was too tired"</em>, what determines why <strong>"it"</strong> connects to <strong>"animal"</strong>?
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem;">
+<button onclick="answerQuiz(3, 'A')" id="q3-opt-A" class="toggle-btn" style="text-align: left; padding: 6px 10px;">A) "animal" is the first noun in the sentence</button>
+<button onclick="answerQuiz(3, 'B')" id="q3-opt-B" class="toggle-btn" style="text-align: left; padding: 6px 10px;">B) The Self-Attention spotlight calculates a high mathematical affinity score between "it" and "animal" due to the context word "tired"</button>
+<button onclick="answerQuiz(3, 'C')" id="q3-opt-C" class="toggle-btn" style="text-align: left; padding: 6px 10px;">C) The tokenizer automatically removes pronouns</button>
+<button onclick="answerQuiz(3, 'D')" id="q3-opt-D" class="toggle-btn" style="text-align: left; padding: 6px 10px;">D) The model randomly guesses on every run</button>
+</div>
+<div id="q3-feedback" style="display: none; margin-top: 6px; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem;"></div>
+</div>
+
+<!-- QUESTION 4 -->
+<div class="quiz-card" style="background: #11111b; border: 1px solid #313244; border-radius: 8px; padding: 1rem;">
+<div style="font-weight: 600; font-size: 0.85rem; color: #f5e0dc; margin-bottom: 0.5rem;">
+4. When configuring an autonomous coding agent that must produce strict, deterministic Python code and valid tool calls, which <strong>temperature</strong> is optimal?
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem;">
+<button onclick="answerQuiz(4, 'A')" id="q4-opt-A" class="toggle-btn" style="text-align: left; padding: 6px 10px;">A) Temperature = 1.5 (High randomness & creative chaos)</button>
+<button onclick="answerQuiz(4, 'B')" id="q4-opt-B" class="toggle-btn" style="text-align: left; padding: 6px 10px;">B) Temperature = 0.8 (Creative poetry flow)</button>
+<button onclick="answerQuiz(4, 'C')" id="q4-opt-C" class="toggle-btn" style="text-align: left; padding: 6px 10px;">C) Temperature = 0.1 (Cold / near-deterministic probability wheel)</button>
+<button onclick="answerQuiz(4, 'D')" id="q4-opt-D" class="toggle-btn" style="text-align: left; padding: 6px 10px;">D) Temperature has no effect on tool calling</button>
+</div>
+<div id="q4-feedback" style="display: none; margin-top: 6px; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem;"></div>
+</div>
+
+<!-- QUESTION 5 -->
+<div class="quiz-card" style="background: #11111b; border: 1px solid #313244; border-radius: 8px; padding: 1rem;">
+<div style="font-weight: 600; font-size: 0.85rem; color: #f5e0dc; margin-bottom: 0.5rem;">
+5. Why does <strong>4-bit Quantization (<code>Q4_K_M</code>)</strong> allow a 14-Billion parameter model to run comfortably on a 24GB Apple Silicon Mac mini?
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem;">
+<button onclick="answerQuiz(5, 'A')" id="q5-opt-A" class="toggle-btn" style="text-align: left; padding: 6px 10px;">A) It compresses weights from 28 GB (FP16) to ~9.0 GB, leaving ~8.5 GB of free headroom for macOS and KV-Cache</button>
+<button onclick="answerQuiz(5, 'B')" id="q5-opt-B" class="toggle-btn" style="text-align: left; padding: 6px 10px;">B) It deletes 75% of the model's 48 floors</button>
+<button onclick="answerQuiz(5, 'C')" id="q5-opt-C" class="toggle-btn" style="text-align: left; padding: 6px 10px;">C) It runs exclusively on the CPU and ignores GPU memory</button>
+<button onclick="answerQuiz(5, 'D')" id="q5-opt-D" class="toggle-btn" style="text-align: left; padding: 6px 10px;">D) It converts the model into an MP3 audio file</button>
+</div>
+<div id="q5-feedback" style="display: none; margin-top: 6px; padding: 6px 10px; border-radius: 6px; font-size: 0.75rem;"></div>
+</div>
+
+</div>
+
+<!-- Final Result Banner -->
+<div id="quiz-final-banner" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px; background: rgba(16,185,129,0.15); border: 1px solid #10b981; text-align: center;">
+<div style="font-size: 1.1rem; font-weight: bold; color: #34d399;">🎉 Module 1 Passed with 100%!</div>
+<div style="font-size: 0.85rem; color: #cdd6f4; margin-top: 4px;">You have mastered Local AI Inference, Synaptic Weights, Attention Spotlights, and Apple Silicon Mechanics!</div>
+</div>
+</div>
+
+---
+
 ## 🚀 Next Up: Module 2
 
 In [[curriculum|Module 2]], we will explore:  
@@ -352,6 +448,65 @@ In [[curriculum|Module 2]], we will explore:
 
 <!-- INLINE SCRIPT WITH QUARTZ SPA SUPPORT -->
 <script>
+  // QUIZ LOGIC
+  var quizAnswers = {
+    1: { correct: 'B', expl: '✅ <strong>Correct!</strong> Knowledge is stored as geometric synaptic weights (floating-point numbers), not in text files or databases.' },
+    2: { correct: 'A', expl: '✅ <strong>Correct!</strong> Subtracting the "Male" concept vector and adding the "Female" vector from King lands directly at Queen.' },
+    3: { correct: 'B', expl: '✅ <strong>Correct!</strong> Self-attention dynamically computes connection weights between words based on surrounding context words like "tired".' },
+    4: { correct: 'C', expl: '✅ <strong>Correct!</strong> Temperature 0.1 freezes the probability roulette wheel on the mathematically optimal tokens for strict coding and tool schemas.' },
+    5: { correct: 'A', expl: '✅ <strong>Correct!</strong> 4-bit quantization compresses weights to ~9.0 GB, fitting easily into 24GB Unified Memory with 8.5GB of free headroom.' }
+  };
+  var userQuizScores = {};
+
+  window.answerQuiz = function(qNum, selected) {
+    var q = quizAnswers[qNum];
+    var isCorrect = selected === q.correct;
+    var fb = document.getElementById("q" + qNum + "-feedback");
+    
+    ['A', 'B', 'C', 'D'].forEach(function(opt) {
+      var btn = document.getElementById("q" + qNum + "-opt-" + opt);
+      if (!btn) return;
+      if (opt === q.correct) {
+        btn.style.background = isCorrect || selected === opt ? "rgba(16,185,129,0.2)" : "#313244";
+        btn.style.borderColor = "#10b981";
+        btn.style.color = "#34d399";
+      } else if (opt === selected && !isCorrect) {
+        btn.style.background = "rgba(239,68,68,0.2)";
+        btn.style.borderColor = "#ef4444";
+        btn.style.color = "#f87171";
+      } else {
+        btn.style.background = "#313244";
+        btn.style.borderColor = "#45475a";
+        btn.style.color = "#a6adc8";
+      }
+    });
+
+    if (fb) {
+      fb.style.display = "block";
+      if (isCorrect) {
+        fb.style.background = "rgba(16,185,129,0.15)";
+        fb.style.border = "1px solid rgba(16,185,129,0.4)";
+        fb.style.color = "#34d399";
+        fb.innerHTML = q.expl;
+        userQuizScores[qNum] = 1;
+      } else {
+        fb.style.background = "rgba(239,68,68,0.15)";
+        fb.style.border = "1px solid rgba(239,68,68,0.4)";
+        fb.style.color = "#f87171";
+        fb.innerHTML = "❌ <strong>Incorrect.</strong> Try reviewing the section above and select another option!";
+        userQuizScores[qNum] = 0;
+      }
+    }
+
+    var totalScore = Object.values(userQuizScores).reduce(function(a, b) { return a + b; }, 0);
+    var scoreBadge = document.getElementById("pub-quiz-score");
+    if (scoreBadge) scoreBadge.textContent = "Score: " + totalScore + " / 5";
+
+    var banner = document.getElementById("quiz-final-banner");
+    if (banner) {
+      banner.style.display = totalScore === 5 ? "block" : "none";
+    }
+  };
   window.runPubVectorMath = function() {
     var a1 = document.getElementById("pub-vec-arrow1");
     var a2 = document.getElementById("pub-vec-arrow2");
