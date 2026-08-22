@@ -25,23 +25,48 @@ tags:
 
 To understand how an AI assistant works, think of a movie production stage. The **Model** is only the lead actor—it needs 7 other systems to create a functional autonomous agent:
 
-```mermaid
-flowchart TD
-    User["👨‍💻 User Request"] --> Surface["🖥️ Surface (Web UI / Terminal)"]
-    Surface --> Agent["🤖 Agent Conductor (LangChain / Engine)"]
-    
-    Agent --> Model["🧠 Model Brain (qwen2.5-coder:14b)"]
-    Agent --> Tools["⚙️ Skills & Tools (Web, Python, Edge)"]
-    Agent --> Vault["📁 Obsidian Vault (Long-Term Memory)"]
-    Agent --> Telemetry["📊 Telemetry Hub (Latency & RAM)"]
-    
-    Tools --> Publisher["⚡ Cloudflare Edge Publisher"]
+<div class="arch-system-map">
+  <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center;">
+    <div class="arch-node primary">
+      <span>👨‍💻 User Request</span>
+    </div>
+    <span class="arch-down-arrow">➔</span>
+    <div class="arch-node primary">
+      <span>🖥️ Surface Cockpit (Web UI / Terminal)</span>
+    </div>
+  </div>
 
-    classDef core fill:#1e1e2e,stroke:#6366f1,stroke-width:2px,color:#cdd6f4;
-    classDef sys fill:#181825,stroke:#10b981,stroke-width:2px,color:#a6e3a1;
-    class User,Surface,Agent,Model core;
-    class Tools,Vault,Telemetry,Publisher sys;
-```
+  <div class="arch-down-arrow">⬇</div>
+
+  <div class="arch-node conductor">
+    <span>🤖 Agent Conductor (Argus Engine / LangChain Router)</span>
+  </div>
+
+  <div class="arch-down-arrow">⬇</div>
+
+  <div class="arch-branch-grid">
+    <div class="branch-card" style="border-top: 3px solid #6366f1;">
+      <div class="card-title"><span>🧠 Model Brain</span></div>
+      <div class="card-sub">qwen2.5-coder:14b</div>
+      <div style="font-size: 0.75rem; color: var(--darkgray); margin-top: 4px;">Predicts next words via 14B synaptic weights</div>
+    </div>
+    <div class="branch-card" style="border-top: 3px solid #10b981;">
+      <div class="card-title"><span>⚙️ Skills & Tools</span></div>
+      <div class="card-sub">Web, Python, Edge</div>
+      <div style="font-size: 0.75rem; color: var(--darkgray); margin-top: 4px;">The hands & eyes that execute live actions</div>
+    </div>
+    <div class="branch-card" style="border-top: 3px solid #ec4899;">
+      <div class="card-title"><span>📁 Memory Vault</span></div>
+      <div class="card-sub">Obsidian Markdown</div>
+      <div style="font-size: 0.75rem; color: var(--darkgray); margin-top: 4px;">Permanent knowledge filing cabinet</div>
+    </div>
+    <div class="branch-card" style="border-top: 3px solid #f59e0b;">
+      <div class="card-title"><span>📊 Telemetry Hub</span></div>
+      <div class="card-sub">Latency & RAM Flight Recorder</div>
+      <div style="font-size: 0.75rem; color: var(--darkgray); margin-top: 4px;">Monitors token speeds and Apple Silicon RAM</div>
+    </div>
+  </div>
+</div>
 
 1. **The Model (`qwen2.5-coder:14b`)**: The mathematical brain predicting next words.
 2. **The Runtime (`Ollama`)**: Loads 9.0GB weights into memory and fires GPU compute.
@@ -283,23 +308,51 @@ Why does `qwen2.5-coder:14b` run so fast on a Mac mini?
 
 When running `qwen2.5-coder:14b` locally, what can you actually adjust, and what is permanently locked?
 
-```mermaid
-flowchart TD
-    subgraph ControlPanels["🎛️ What You Control at Runtime"]
-        A["1. Sampling Controls<br/>(Temperature, Top-P, Top-K, Repeat Penalty)"]
-        B["2. Hardware & Context<br/>(Context Length 'num_ctx', Metal GPU Layers)"]
-        C["3. Guardrails & Stops<br/>(Stop Sequences, Max Output Tokens)"]
-        D["4. Conditioning & System<br/>(System Prompts, Injected Memories)"]
-    end
+<div class="control-comparison-grid">
+  <div class="control-card runtime">
+    <div class="control-header" style="color: #10b981;">
+      <span>🎛️ What You Control at Runtime</span>
+    </div>
+    <div class="control-list">
+      <div class="control-item">
+        <span class="item-icon">🎲</span>
+        <div><strong>Sampling Levers:</strong> Temperature, Top-P, Top-K, and Repeat Penalty</div>
+      </div>
+      <div class="control-item">
+        <span class="item-icon">⚡</span>
+        <div><strong>Hardware & Context:</strong> Context length (<code>num_ctx</code>) and Metal GPU layer offload</div>
+      </div>
+      <div class="control-item">
+        <span class="item-icon">🛑</span>
+        <div><strong>Guardrail Brakes:</strong> Stop sequences (<code>Observation:</code>, <code><|im_end|></code>) and max tokens</div>
+      </div>
+      <div class="control-item">
+        <span class="item-icon">🎭</span>
+        <div><strong>Conditioning:</strong> System Prompts and Seed for reproducible execution</div>
+      </div>
+    </div>
+  </div>
 
-    subgraph FrozenCore["🧊 What is FROZEN inside the .GGUF File"]
-        F1["14 Billion Floating-Point Weights"]
-        F2["152,064 Word Vocabulary Dictionary"]
-        F3["48-Floor Transformer Layer Stack"]
-    end
-
-    ControlPanels --> FrozenCore
-```
+  <div class="control-card frozen">
+    <div class="control-header" style="color: #6366f1;">
+      <span>🧊 What is FROZEN inside the .GGUF File</span>
+    </div>
+    <div class="control-list">
+      <div class="control-item">
+        <span class="item-icon">🔒</span>
+        <div><strong>14 Billion Weights:</strong> Floating-point matrices locked on SSD/RAM</div>
+      </div>
+      <div class="control-item">
+        <span class="item-icon">📖</span>
+        <div><strong>152,064 Word Vocabulary:</strong> Token translation dictionary</div>
+      </div>
+      <div class="control-item">
+        <span class="item-icon">🏢</span>
+        <div><strong>48-Floor Transformer Stack:</strong> 5,120 hidden dimension layer architecture</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ### 1. Sampling Controls (The Roulette Wheel)
 * **`temperature`** ($0.0 - 1.5$): Controls randomness. $0.1$ = strict frozen math for code/tools; $0.8$ = creative flow.
